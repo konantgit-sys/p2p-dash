@@ -188,3 +188,167 @@ INFO:     127.0.0.1:50874 - "GET /js/i18n.js HTTP/1.1" 200 OK
 [dash] Heartbeat sent (uptime: 30.1s)
 INFO:     155.212.133.195:0 - "GET / HTTP/1.1" 200 OK
 INFO:     155.212.133.195:0 - "GET / HTTP/1.1" 200 OK
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 60.1s)
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 90.1s)
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 120.1s)
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 150.1s)
+INFO:     84.54.29.45:0 - "GET / HTTP/1.1" 200 OK
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 180.1s)
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 210.1s)
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 240.1s)
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 270.1s)
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 300.1s)
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 330.1s)
+INFO:     84.54.29.45:0 - "GET / HTTP/1.1" 200 OK
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 360.1s)
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 390.1s)
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 420.1s)
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 450.1s)
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 480.1s)
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 510.1s)
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 540.1s)
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 570.1s)
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 600.1s)
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 630.1s)
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 660.1s)
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 690.1s)
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 720.1s)
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 750.2s)
+INFO:     84.54.29.45:0 - "GET / HTTP/1.1" 200 OK
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 780.2s)
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 810.2s)
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 840.2s)
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 870.2s)
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 900.2s)
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 930.2s)
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 960.2s)
+INFO:     84.54.29.45:0 - "GET / HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 990.2s)
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 1020.2s)
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 1050.2s)
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 1080.2s)
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 1110.2s)
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 1140.2s)
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 1170.2s)
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 1200.2s)
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 1230.2s)
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 1260.2s)
+INFO:     84.54.29.45:0 - "GET / HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 1290.2s)
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 1320.2s)
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 1350.2s)
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 1380.2s)
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 1410.2s)
+INFO:     127.0.0.1:58400 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58414 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58420 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58436 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58444 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58452 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58458 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58468 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58474 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58488 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58508 - "GET /api/metrics HTTP/1.1" 200 OK
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 1440.2s)
+INFO:     127.0.0.1:53848 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34850 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47212 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47218 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47228 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47238 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47250 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47262 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47268 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47284 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47286 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47302 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 1470.2s)
+INFO:     127.0.0.1:46028 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46032 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46040 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46042 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46048 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46050 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46062 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46078 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46080 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46082 - "POST /api/emit HTTP/1.1" 200 OK
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 1500.2s)
+INFO:     127.0.0.1:46006 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     155.212.133.195:0 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47234 - "GET /api/metrics HTTP/1.1" 200 OK
