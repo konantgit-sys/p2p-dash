@@ -1,0 +1,190 @@
+/home/agent/data/sites/p2p-dash/app.py:63: DeprecationWarning: 
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+        
+  @app.on_event("startup")
+INFO:     Started server process [547981]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8090 (Press CTRL+C to quit)
+[transport] Started. PeerID: did:p2p:dashboard... TCP: 127.0.0.1:42537 [PLAIN]
+[transport] subscribe ADDED _dht to _bus (now 1 subs, _bus keys: ['_dht'])
+[transport] Subscribed to _dht
+[agent:dashboard] Started. DID=did:snin:e7ccc6e4d978740...
+[dash] AgentMesh started: did:snin:e7ccc6e4d9787401
+[dash] Relay mode enabled
+[dash] P2P port saved: 42537
+[transport] subscribe ADDED agent:all to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all'])
+[transport] Subscribed to agent:all
+[transport] subscribe ADDED agent:cryter to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter'])
+[transport] Subscribed to agent:cryter
+[transport] subscribe ADDED agent:forecaster to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:forecaster'])
+[transport] Subscribed to agent:forecaster
+[transport] subscribe ADDED agent:archivist to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:forecaster', 'agent:archivist'])
+[transport] Subscribed to agent:archivist
+[transport] subscribe ADDED agent:echo to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:forecaster', 'agent:archivist', 'agent:echo'])
+[transport] Subscribed to agent:echo
+[dash] Subscribed to echo
+INFO:     127.0.0.1:47538 - "POST /api/emit HTTP/1.1" 422 Unprocessable Entity
+INFO:     155.212.133.195:0 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47564 - "POST /api/emit HTTP/1.1" 200 OK
+/home/agent/data/sites/p2p-dash/app.py:63: DeprecationWarning: 
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+        
+  @app.on_event("startup")
+INFO:     Started server process [211]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8090 (Press CTRL+C to quit)
+[transport] Started. PeerID: did:p2p:dashboard... TCP: 127.0.0.1:45331 [PLAIN]
+[transport] subscribe ADDED _dht to _bus (now 1 subs, _bus keys: ['_dht'])
+[transport] Subscribed to _dht
+[agent:dashboard] Started. DID=did:snin:91d59575b8b29b1...
+[dash] AgentMesh started: did:snin:91d59575b8b29b16
+[dash] Relay mode enabled
+[dash] P2P port saved: 45331
+[transport] subscribe ADDED agent:all to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all'])
+[transport] Subscribed to agent:all
+[transport] subscribe ADDED agent:cryter to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter'])
+[transport] Subscribed to agent:cryter
+[transport] subscribe ADDED agent:forecaster to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:forecaster'])
+[transport] Subscribed to agent:forecaster
+[transport] subscribe ADDED agent:archivist to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:forecaster', 'agent:archivist'])
+[transport] Subscribed to agent:archivist
+[transport] subscribe ADDED agent:echo to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:forecaster', 'agent:archivist', 'agent:echo'])
+[transport] Subscribed to agent:echo
+[dash] Subscribed to echo
+[dash] AGENT MSG: did:snin:91d5957 type=event
+[dash] Heartbeat sent (uptime: 30.8s)
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:91d5957 type=event
+[dash] Heartbeat sent (uptime: 60.8s)
+[dash] AGENT MSG: did:snin:91d5957 type=event
+[dash] Heartbeat sent (uptime: 90.8s)
+INFO:     84.54.29.45:0 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45666 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45668 - "GET /api/peers HTTP/1.1" 200 OK
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:91d5957 type=event
+[dash] Heartbeat sent (uptime: 120.8s)
+[dash] AGENT MSG: did:snin:91d5957 type=event
+[dash] Heartbeat sent (uptime: 150.8s)
+INFO:     127.0.0.1:51258 - "GET /api/timeline HTTP/1.1" 200 OK
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:91d5957 type=event
+[dash] Heartbeat sent (uptime: 180.8s)
+[dash] AGENT MSG: did:snin:91d5957 type=event
+[dash] Heartbeat sent (uptime: 210.8s)
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:91d5957 type=event
+[dash] Heartbeat sent (uptime: 240.8s)
+[dash] AGENT MSG: did:snin:91d5957 type=event
+[dash] Heartbeat sent (uptime: 270.8s)
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:91d5957 type=event
+[dash] Heartbeat sent (uptime: 300.8s)
+INFO:     127.0.0.1:39676 - "GET /api HTTP/1.1" 200 OK
+INFO:     155.212.133.195:0 - "GET / HTTP/1.1" 200 OK
+INFO:     84.54.29.45:0 - "GET / HTTP/1.1" 200 OK
+/home/agent/data/sites/p2p-dash/app.py:63: DeprecationWarning: 
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+        
+  @app.on_event("startup")
+INFO:     Started server process [18078]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 8090): address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+[transport] Started. PeerID: did:p2p:dashboard... TCP: 127.0.0.1:35803 [PLAIN]
+[transport] subscribe ADDED _dht to _bus (now 1 subs, _bus keys: ['_dht'])
+[transport] Subscribed to _dht
+[agent:dashboard] Started. DID=did:snin:f12a2521923fba5...
+[dash] AgentMesh started: did:snin:f12a2521923fba57
+[dash] Relay mode enabled
+[dash] P2P port saved: 35803
+[transport] subscribe ADDED agent:all to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all'])
+[transport] Subscribed to agent:all
+[transport] subscribe ADDED agent:cryter to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter'])
+[transport] Subscribed to agent:cryter
+[transport] subscribe ADDED agent:forecaster to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:forecaster'])
+[transport] Subscribed to agent:forecaster
+[transport] subscribe ADDED agent:archivist to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:forecaster', 'agent:archivist'])
+[transport] Subscribed to agent:archivist
+[transport] subscribe ADDED agent:echo to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:forecaster', 'agent:archivist', 'agent:echo'])
+[transport] Subscribed to agent:echo
+[dash] Subscribed to echo
+/home/agent/data/sites/p2p-dash/app.py:63: DeprecationWarning: 
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+        
+  @app.on_event("startup")
+INFO:     Started server process [18119]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 8090): address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+[transport] Started. PeerID: did:p2p:dashboard... TCP: 127.0.0.1:39403 [PLAIN]
+[transport] subscribe ADDED _dht to _bus (now 1 subs, _bus keys: ['_dht'])
+[transport] Subscribed to _dht
+[agent:dashboard] Started. DID=did:snin:91c019b3dabf919...
+[dash] AgentMesh started: did:snin:91c019b3dabf9192
+[dash] Relay mode enabled
+[dash] P2P port saved: 39403
+[transport] subscribe ADDED agent:all to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all'])
+[transport] Subscribed to agent:all
+[transport] subscribe ADDED agent:cryter to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter'])
+[transport] Subscribed to agent:cryter
+[transport] subscribe ADDED agent:forecaster to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:forecaster'])
+[transport] Subscribed to agent:forecaster
+[transport] subscribe ADDED agent:archivist to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:forecaster', 'agent:archivist'])
+[transport] Subscribed to agent:archivist
+[transport] subscribe ADDED agent:echo to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:forecaster', 'agent:archivist', 'agent:echo'])
+[transport] Subscribed to agent:echo
+[dash] Subscribed to echo
+/home/agent/data/sites/p2p-dash/app.py:63: DeprecationWarning: 
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+        
+  @app.on_event("startup")
+INFO:     Started server process [18144]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8090 (Press CTRL+C to quit)
+[transport] Started. PeerID: did:p2p:dashboard... TCP: 127.0.0.1:35485 [PLAIN]
+[transport] subscribe ADDED _dht to _bus (now 1 subs, _bus keys: ['_dht'])
+[transport] Subscribed to _dht
+[agent:dashboard] Started. DID=did:snin:ec3946aca3ad296...
+[dash] AgentMesh started: did:snin:ec3946aca3ad2961
+[dash] Relay mode enabled
+[dash] P2P port saved: 35485
+[transport] subscribe ADDED agent:all to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all'])
+[transport] Subscribed to agent:all
+[transport] subscribe ADDED agent:cryter to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter'])
+[transport] Subscribed to agent:cryter
+[transport] subscribe ADDED agent:forecaster to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:forecaster'])
+[transport] Subscribed to agent:forecaster
+[transport] subscribe ADDED agent:archivist to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:forecaster', 'agent:archivist'])
+[transport] Subscribed to agent:archivist
+[transport] subscribe ADDED agent:echo to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:forecaster', 'agent:archivist', 'agent:echo'])
+[transport] Subscribed to agent:echo
+[dash] Subscribed to echo
+INFO:     127.0.0.1:50872 - "GET /css/style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /js/i18n.js HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:ec3946a type=event
+[dash] Heartbeat sent (uptime: 30.1s)
+INFO:     155.212.133.195:0 - "GET / HTTP/1.1" 200 OK
+INFO:     155.212.133.195:0 - "GET / HTTP/1.1" 200 OK
