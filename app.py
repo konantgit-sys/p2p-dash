@@ -501,6 +501,80 @@ async def emit_message(req: EmitRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 
+# ── Agent-to-Agent ping-pong ──────────────────────────
+
+_pingpong_results = []  # list of {ts, latency_ms}
+
+
+@app.get("/api/latency/pingpong")
+async def get_pingpong():
+    """Return recent A2A ping-pong results + run a new one."""
+    global _pingpong_results
+    if not mesh:
+        return {"status": "error", "error": "mesh not initialized"}
+
+    # Run one ping-pong
+    seq = int(time.time() * 1000) % 1000000
+    ts_sent = time.time()
+    try:
+        await mesh.emit("cryter", {"type": "ping", "seq": seq, "ts_sent": ts_sent})
+    except Exception as e:
+        return {"status": "error", "error": str(e)}
+
+    # Wait for it to appear in message_history (poll 100ms, 2s timeout)
+    found = None
+    for _ in range(20):
+        await asyncio.sleep(0.1)
+        for m in message_history:
+            p = m.get("payload", {})
+            if isinstance(p, dict) and p.get("seq") == seq:
+                found = m["_received_at"]
+                break
+        if found:
+            break
+
+    if found:
+        latency_ms = round((found - ts_sent) * 1000, 1)
+        _pingpong_results.append({"ts": time.time(), "latency_ms": latency_ms})
+    else:
+        latency_ms = -1
+        _pingpong_results.append({"ts": time.time(), "latency_ms": -1})
+
+    # Keep last 200 results
+    if len(_pingpong_results) > 200:
+        _pingpong_results = _pingpong_results[-200:]
+
+    # Calculate distribution buckets
+    vals = [r["latency_ms"] for r in _pingpong_results if r["latency_ms"] > 0]
+    buckets = [0] * 10  # 0-2, 2-4, 4-8, 8-16, 16-32, 32-64, 64-128, 128-256, 256-512, 512+
+    for v in vals:
+        if v <= 2: buckets[0] += 1
+        elif v <= 4: buckets[1] += 1
+        elif v <= 8: buckets[2] += 1
+        elif v <= 16: buckets[3] += 1
+        elif v <= 32: buckets[4] += 1
+        elif v <= 64: buckets[5] += 1
+        elif v <= 128: buckets[6] += 1
+        elif v <= 256: buckets[7] += 1
+        elif v <= 512: buckets[8] += 1
+        else: buckets[9] += 1
+
+    vals.sort()
+    n = len(vals)
+    return {
+        "status": "ok",
+        "data": {
+            "latest_ms": latency_ms,
+            "samples": n,
+            "distribution": buckets,
+            "buckets": ["0-2", "2-4", "4-8", "8-16", "16-32", "32-64", "64-128", "128-256", "256-512", "512+"],
+            "p50": round(vals[int(n * 0.50)], 1) if n else None,
+            "p99": round(vals[min(int(n * 0.99), n - 1)], 1) if n else None,
+            "avg": round(statistics.mean(vals), 1) if n else None,
+        }
+    }
+
+
 # Serve frontend — статика по /app/ пути, API по /api/
 from pathlib import Path
 site_dir = Path("/home/agent/data/sites/p2p-dash")

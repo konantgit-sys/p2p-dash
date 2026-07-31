@@ -111,8 +111,10 @@
           <div class="gauge-wrap"><div class="gauge"><svg viewBox="0 0 50 50"><circle class="bg-ring" cx="25" cy="25" r="21"/><circle class="fill-ring" id="gaugeP50" cx="25" cy="25" r="21" stroke-dasharray="132" stroke-dashoffset="132"/></svg><div class="value" id="gaugeP50Val">-</div></div><div class="gauge-label">p50</div></div>
           <div class="gauge-wrap"><div class="gauge"><svg viewBox="0 0 50 50"><circle class="bg-ring" cx="25" cy="25" r="21"/><circle class="fill-ring" id="gaugeP99" cx="25" cy="25" r="21" stroke-dasharray="132" stroke-dashoffset="132" style="stroke:var(--purple);filter:drop-shadow(0 0 5px var(--accent2-glow))"/></svg><div class="value" id="gaugeP99Val" style="color:var(--purple)">-</div></div><div class="gauge-label">p99</div></div>
           <div class="gauge-wrap"><div class="gauge"><svg viewBox="0 0 50 50"><circle class="bg-ring" cx="25" cy="25" r="21"/><circle class="fill-ring" id="gaugeAvg" cx="25" cy="25" r="21" stroke-dasharray="132" stroke-dashoffset="132" style="stroke:var(--green);filter:drop-shadow(0 0 5px var(--green-glow))"/></svg><div class="value" id="gaugeAvgVal" style="color:var(--green)">-</div></div><div class="gauge-label">avg</div></div>
+          <div class="gauge-wrap"><div class="gauge"><svg viewBox="0 0 50 50"><circle class="bg-ring" cx="25" cy="25" r="21"/><circle class="fill-ring" id="gaugeA2A" cx="25" cy="25" r="21" stroke-dasharray="132" stroke-dashoffset="132" style="stroke:var(--orange);filter:drop-shadow(0 0 5px var(--orange-glow))"/></svg><div class="value" id="gaugeA2AVal" style="color:var(--orange)">-</div></div><div class="gauge-label">A2A</div></div>
         </div>
         <div style="font-size:11px;color:var(--muted);margin-top:6px;text-align:center"><span data-i18n="card.lat_samples">samples:</span> <b id="latN" style="color:var(--text2)">0</b></div>
+        <div class="dist-bars" id="latDist" style="display:flex;gap:1px;height:28px;align-items:flex-end;padding:0 4px;margin-top:6px"></div>
         <canvas class="chart-canvas" id="latHistory" style="margin-top:4px;height:36px"></canvas>
       </div>
       <div class="card">

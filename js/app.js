@@ -293,6 +293,21 @@ async function updateAll() {
     drawLineChart('trendChart', pts.map(p => p.msg_rate || 0), '#22c55e', 'rgba(34,197,94,', 0, Math.max(...pts.map(p => p.msg_rate || 0), 5));
   }
 
+  // ── Agent-to-Agent ping-pong ──
+  try {
+    const pp = await f(API + '/latency/pingpong');
+    if (pp.status === 'ok' && pp.data) {
+      updateGauge('gaugeA2A', pp.data.latest_ms, 100);
+      updateGaugeVal('gaugeA2AVal', pp.data.latest_ms);
+      const dist = pp.data.distribution || [];
+      const maxB = Math.max(...dist, 1);
+      const colors = ['#22c55e','#4ade80','#a3e635','#facc15','#f97316','#ef4444','#ec4899','#a855f7','#6366f1','#8b5cf6'];
+      document.getElementById('latDist').innerHTML = dist.map((v,i) =>
+        '<div style="flex:1;background:' + colors[i] + ';height:' + Math.max(2,(v/maxB)*28) + 'px;border-radius:2px 2px 0 0;opacity:' + (0.3+v/maxB*0.7) + '" title="' + pp.data.buckets[i] + ': ' + v + '"></div>'
+      ).join('');
+    }
+  } catch(e) {}
+
   if (sys.status === 'ok') {
     document.getElementById('sysMem').textContent = (sys.data.memory_pct || 0) + '% (' + (sys.data.memory_used_gb || 0) + '/' + (sys.data.memory_total_gb || 0) + ' GB)';
     document.getElementById('sysDisk').textContent = (sys.data.disk_pct || 0) + '% (' + (sys.data.disk_used_gb || 0) + '/' + (sys.data.disk_total_gb || 0) + ' GB)';
