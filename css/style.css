@@ -341,3 +341,14 @@ section.active{display:block}
   .hero-content h1{font-size:18px}
   .about-grid{grid-template-columns:1fr}
 }
+
+/* === OVERFLOW FIXES (2026-07-31) === */
+.card { word-wrap: break-word; overflow-wrap: break-word; }
+pre, code, .msg-payload, .msg-from, .msg-signature { word-break: break-all; overflow-wrap: anywhere; }
+.messages-table { table-layout: fixed; width: 100%; }
+.messages-table td { word-break: break-all; }
+@media (max-width: 768px) {
+  .messages-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .card { max-width: 100vw; }
+  canvas { max-width: 100%; }
+}

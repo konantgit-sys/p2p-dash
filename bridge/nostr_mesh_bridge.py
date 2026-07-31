@@ -42,7 +42,7 @@ def emit_to_mesh(agent_name, event):
     kind = event.get("kind", 1)
 
     payload = json.dumps({
-        "capability": f"agent:{agent_name}",
+        "capability": f"{agent_name}",
         "payload": {
             "event_id": event_id,
             "kind": kind,

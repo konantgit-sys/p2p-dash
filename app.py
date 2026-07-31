@@ -104,7 +104,7 @@ async def startup():
             except Exception as e:
                 print(f"[dash] on_agent_msg error: {e}")
 
-        for agent_topic in ["agent:all", "agent:cryter", "agent:forecaster", "agent:archivist"]:
+        for agent_topic in ["agent:all", "agent:cryter", "agent:v2bot", "agent:forecaster", "agent:archivist"]:
             await mesh.transport.subscribe(agent_topic, on_agent_msg)
 
         # Subscribe to echo for the live demo
@@ -489,10 +489,13 @@ async def get_metrics():
 
 @app.post("/api/emit")
 async def emit_message(req: EmitRequest):
+    global message_history
     if not mesh:
         raise HTTPException(status_code=503, detail="mesh not initialized")
     try:
         msg_id = await mesh.emit(req.capability, req.payload)
+        # Message will be added to message_history by the transport callback
+        # (on_agent_msg handles agent:* topics including agent:cryter, agent:v2bot)
         return {"status": "ok", "msg_id": msg_id}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
