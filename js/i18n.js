@@ -4,7 +4,12 @@
 const I18N = {
   en: {
     'nav.dash':'Dashboard','nav.topo':'Topology','nav.about':'About',
-    'hero.badge':'P2P Agent Mesh v0.5.1','hero.title':'Decentralized Mesh Transport','hero.sub':'Live dashboard — peer-to-peer agent communication',
+    'hero.badge':'P2P Agent Mesh v0.5.1',
+    'hero.online':'Mesh Online','hero.degraded':'Low Activity','hero.offline':'No Peers',
+    'hero.peers':'Peers','hero.msgs':'Messages','hero.lat':'p50','hero.uptime':'Uptime',
+    'hero.sub':'Live dashboard — peer-to-peer agent communication',
+    'summary.default':'Mesh Online',
+    'summary.online':'Mesh Online','summary.degraded':'Low Activity','summary.offline':'No Peers',
     'card.peers':'Peers','card.peers_sub':'P2P mesh nodes','card.msgs':'Messages','card.msgs_sub':'Received via mesh',
     'card.wal':'WAL Buffer','card.wal_sub':'SQLite WAL entries','card.dht':'DHT','card.dht_sub':'Agents in DHT cache',
     'card.topics':'Topics','card.topics_sub':'Active subscriptions','card.sig':'Sig Gate','card.sig_passed':'Passed',
@@ -23,7 +28,12 @@ const I18N = {
   },
   ru: {
     'nav.dash':'Дашборд','nav.topo':'Топология','nav.about':'О проекте',
-    'hero.badge':'P2P Agent Mesh v0.5.1','hero.title':'Децентрализованный Mesh-транспорт','hero.sub':'Живой дашборд — peer-to-peer коммуникация агентов',
+    'hero.badge':'P2P Agent Mesh v0.5.1',
+    'hero.online':'Сеть активна','hero.degraded':'Низкая активность','hero.offline':'Нет пиров',
+    'hero.peers':'Пиры','hero.msgs':'Сообщения','hero.lat':'p50','hero.uptime':'Аптайм',
+    'hero.sub':'Живой дашборд — peer-to-peer коммуникация агентов',
+    'summary.default':'Сеть активна',
+    'summary.online':'Сеть активна','summary.degraded':'Низкая активность','summary.offline':'Нет пиров',
     'card.peers':'Пиры','card.peers_sub':'Узлы P2P-сети','card.msgs':'Сообщения','card.msgs_sub':'Получено через mesh',
     'card.wal':'WAL Буфер','card.wal_sub':'Записи SQLite WAL','card.dht':'DHT','card.dht_sub':'Агенты в DHT-кэше',
     'card.topics':'Топики','card.topics_sub':'Активные подписки','card.sig':'Sig Gate','card.sig_passed':'Пройдено',

@@ -115,69 +115,27 @@ nav .status-dot.offline{background:var(--red);box-shadow:0 0 8px var(--red),0 0 
   position:relative;height:200px;display:flex;align-items:center;justify-content:center;
   overflow:hidden;border-bottom:1px solid var(--card-border);
 }
-.hero-glow{
-  position:absolute;inset:0;
-  background:radial-gradient(ellipse 70% 50% at 50% 50%,rgba(0,200,255,.07) 0%,transparent 70%),
-    radial-gradient(ellipse 40% 40% at 30% 30%,rgba(139,92,246,.04) 0%,transparent 70%),
-    radial-gradient(ellipse 30% 30% at 70% 70%,rgba(245,158,11,.03) 0%,transparent 70%);
-  animation:heroGlowPulse 8s ease-in-out infinite;
-}
-@keyframes heroGlowPulse{0%,100%{opacity:.8}50%{opacity:1}}
+.hero img{position:absolute;width:110%;height:110%;object-fit:cover;opacity:.18;filter:saturate(.3) brightness(.7);animation:heroPulse 8s ease-in-out infinite}
+@keyframes heroPulse{0%,100%{opacity:.18;transform:scale(1)}50%{opacity:.25;transform:scale(1.03)}}
 .hero-overlay{
   position:absolute;inset:0;
-  background:linear-gradient(180deg,transparent 30%,var(--bg) 100%);
+  background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(0,200,255,.05) 0%,transparent 70%),
+    linear-gradient(180deg,transparent 30%,var(--bg) 100%);
 }
-.hero-content{position:relative;z-index:1;text-align:center;display:flex;flex-direction:column;align-items:center;gap:0}
+.hero-content{position:relative;z-index:1;text-align:center}
+.hero-content h1{
+  font-size:34px;font-weight:800;letter-spacing:-1px;
+  background:linear-gradient(135deg,var(--accent) 0%,#60d0ff 40%,var(--accent2) 70%,#c084fc 100%);
+  background-size:200% 200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:heroGradient 6s ease-in-out infinite;margin-bottom:6px
+}
+@keyframes heroGradient{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.hero-content p{font-size:14px;color:var(--muted);font-weight:400}
 .hero-badge{
   display:inline-flex;align-items:center;gap:7px;
   background:rgba(0,200,255,.05);border:1px solid rgba(0,200,255,.12);
-  border-radius:20px;padding:5px 15px;font-size:12px;color:var(--accent);margin-bottom:14px;backdrop-filter:blur(8px)
+  border-radius:20px;padding:5px 15px;font-size:12px;color:var(--accent);margin-bottom:12px;backdrop-filter:blur(8px)
 }
-.hero-metrics{display:flex;gap:32px;margin-bottom:8px}
-.hero-metric{text-align:center}
-.hero-metric-value{font-size:36px;font-weight:800;font-family:'JetBrains Mono',monospace;letter-spacing:-1px;line-height:1.1;transition:all .3s ease}
-.hero-metric-value.accent{color:var(--accent);text-shadow:0 0 24px var(--accent-glow)}
-.hero-metric-value.green{color:var(--green);text-shadow:0 0 24px var(--green-glow)}
-.hero-metric-value.orange{color:var(--orange)}
-.hero-metric-value.purple{color:var(--purple);text-shadow:0 0 16px var(--accent2-glow)}
-.hero-metric-label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;font-weight:500;margin-top:2px}
-.hero-tagline{font-size:12px;color:var(--muted);opacity:.7}
-
-/* Hero states */
-.hero.online .hero-badge{border-color:rgba(34,197,94,.3);background:rgba(34,197,94,.06)}
-.hero.degraded .hero-badge{border-color:rgba(245,158,11,.3);background:rgba(245,158,11,.06)}
-.hero.offline .hero-badge{border-color:rgba(239,68,68,.3);background:rgba(239,68,68,.06)}
-
-/* ══ SUMMARY BAR ══ */
-.summary-bar{
-  display:flex;align-items:center;justify-content:space-between;
-  background:var(--card);backdrop-filter:blur(10px);
-  -webkit-backdrop-filter:blur(10px);
-  border:1px solid var(--card-border);border-radius:var(--radius);
-  padding:14px 20px;margin-bottom:16px;
-  transition:all .4s ease;flex-wrap:wrap;gap:12px
-}
-.summary-status{display:flex;align-items:center;gap:10px;font-weight:600;font-size:14px;color:var(--text)}
-.summary-dot{width:10px;height:10px;border-radius:50%;transition:all .5s ease}
-.summary-dot.online{background:var(--green);box-shadow:0 0 10px var(--green),0 0 24px var(--green-glow);animation:pulse-dot 2s ease-in-out infinite}
-.summary-dot.degraded{background:var(--orange);box-shadow:0 0 10px var(--orange),0 0 20px rgba(245,158,11,.3)}
-.summary-dot.offline{background:var(--red);box-shadow:0 0 8px var(--red),0 0 16px var(--red-glow)}
-.summary-chips{display:flex;gap:8px;flex-wrap:wrap}
-.summary-chip{
-  display:flex;align-items:baseline;gap:5px;
-  background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);
-  border-radius:8px;padding:6px 12px;transition:all .3s ease
-}
-.summary-chip .chip-num{font-size:16px;font-weight:700;font-family:'JetBrains Mono',monospace;transition:color .3s}
-.summary-chip .chip-label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
-.summary-chip.peers .chip-num{color:var(--accent)}
-.summary-chip.msgs .chip-num{color:var(--green)}
-.summary-chip.rate .chip-num{color:var(--orange)}
-.summary-chip.uptime .chip-num{color:var(--purple)}
-.summary-delta{display:flex;gap:6px;align-items:center;font-size:11px;font-family:'JetBrains Mono',monospace}
-.summary-delta .delta-up{color:var(--green)}
-.summary-delta .delta-down{color:var(--red)}
-.summary-delta .delta-flat{color:var(--muted)}
 
 /* ══ CONTAINER ══ */
 .container{max-width:1340px;margin:0 auto;padding:24px;position:relative;z-index:2}
@@ -362,12 +320,6 @@ section.active{display:block}
   nav .tabs button svg{width:13px;height:13px}
   nav .logo-version{display:none}
   .hero{height:160px}
-  .hero-metrics{gap:18px}
-  .hero-metric-value{font-size:26px}
-  .hero-tagline{display:none}
-  .summary-bar{padding:10px 14px}
-  .summary-chip{padding:4px 8px}
-  .summary-chip .chip-num{font-size:14px}
   .hero-content h1{font-size:22px}
   .grid,.grid-3{grid-template-columns:1fr 1fr;gap:10px}
   .card{padding:14px}
@@ -388,11 +340,6 @@ section.active{display:block}
   nav .lang-btn{padding:4px 6px;font-size:10px}
   .hero-content h1{font-size:18px}
   .about-grid{grid-template-columns:1fr}
-  .hero{height:140px}
-  .hero-metrics{gap:14px}
-  .hero-metric-value{font-size:22px}
-  .summary-bar{flex-direction:column;align-items:flex-start;gap:8px}
-  .summary-delta{width:100%;justify-content:flex-start}
 }
 
 /* === OVERFLOW FIXES (2026-07-31) === */

@@ -255,84 +255,6 @@ function showDetail(json) {
 // ═══ MAIN UPDATE
 // ═══════════════════════════════════════════
 let allMessages = [], historyPoints = [], latHistory = [];
-let _prevMsgs = -1, _prevRate = -1; // for delta tracking
-
-function updateHero(d) {
-  const hero = document.getElementById('heroPane');
-  const dot = document.getElementById('heroStatusDot');
-  const statusLabel = document.getElementById('heroStatusLabel');
-
-  // Peers = primary health indicator
-  const peerCount = d.peers || 0;
-  const msgRate = d.msg_rate || 0;
-
-  animateValueEl(document.getElementById('heroPeers'), peerCount);
-  animateValueEl(document.getElementById('heroMsgs'), d.message_count ?? 0);
-  document.getElementById('heroLatency').textContent = (d.latency?.p50_ms ?? 0) + 'ms';
-  const uptime = Math.floor((d.uptime || 0) / 60);
-  document.getElementById('heroUptime').textContent = uptime + 'm';
-
-  // Status: online (>0 peers + messages flowing), degraded (peers but no msgs), offline (0 peers)
-  hero.classList.remove('online', 'degraded', 'offline');
-  dot.classList.remove('online', 'degraded', 'offline');
-
-  if (peerCount > 0 && msgRate > 0) {
-    hero.classList.add('online');
-    dot.classList.add('online');
-    statusLabel.textContent = i18n ? (i18n['hero.online'] || 'Mesh Online') : 'Mesh Online';
-  } else if (peerCount > 0 && msgRate === 0) {
-    hero.classList.add('degraded');
-    dot.classList.add('degraded');
-    statusLabel.textContent = i18n ? (i18n['hero.degraded'] || 'Low Activity') : 'Low Activity';
-  } else {
-    hero.classList.add('offline');
-    dot.classList.add('offline');
-    statusLabel.textContent = i18n ? (i18n['hero.offline'] || 'No Peers') : 'No Peers';
-  }
-}
-
-function updateSummary(d, peers) {
-  const peerCount = d.peers || 0;
-  const msgCount = d.message_count || 0;
-  const msgRate = d.msg_rate || 0;
-
-  document.getElementById('sumPeers').textContent = peerCount;
-  document.getElementById('sumMsgs').textContent = msgCount;
-  document.getElementById('sumRate').textContent = msgRate.toFixed(1);
-  document.getElementById('sumUptime').textContent = Math.floor((d.uptime || 0) / 60) + 'm';
-
-  // Status dot
-  const dot = document.getElementById('summaryDot');
-  const text = document.getElementById('summaryText');
-  dot.className = 'summary-dot';
-  if (peerCount > 0 && msgRate > 0) { dot.classList.add('online'); text.textContent = (i18n && i18n['summary.online']) || 'Mesh Online'; }
-  else if (peerCount > 0) { dot.classList.add('degraded'); text.textContent = (i18n && i18n['summary.degraded']) || 'Low Activity'; }
-  else { dot.classList.add('offline'); text.textContent = (i18n && i18n['summary.offline']) || 'No Peers'; }
-
-  // Delta indicators
-  const delta = document.getElementById('summaryDelta');
-  if (_prevMsgs >= 0) {
-    const diff = msgCount - _prevMsgs;
-    if (diff > 0) delta.innerHTML = '<span class="delta-up">▲ +' + diff + ' msgs</span>';
-    else if (diff < 0) delta.innerHTML = '<span class="delta-down">▼ ' + diff + ' msgs</span>';
-    else delta.innerHTML = '<span class="delta-flat">— 0</span>';
-  }
-  _prevMsgs = msgCount;
-  _prevRate = msgRate;
-}
-
-function animateValueEl(el, target) {
-  if (!el) return;
-  const cur = parseInt(el.textContent) || 0;
-  if (cur === target) { el.textContent = target; return; }
-  const dur = 300, start = performance.now();
-  function step(ts) {
-    const p = Math.min((ts - start) / dur, 1);
-    el.textContent = Math.round(cur + (target - cur) * p);
-    if (p < 1) requestAnimationFrame(step);
-  }
-  requestAnimationFrame(step);
-}
 
 async function updateAll() {
   const [metrics, status, peers, sys, stats, hist] = await Promise.all([
@@ -350,12 +272,6 @@ async function updateAll() {
     animateValue(document.getElementById('msgRate'), d.msg_rate || 0, '');
     document.getElementById('sigPassed').textContent = d.sig_stats?.passed ?? 0;
     document.getElementById('sigRejected').textContent = (d.sig_stats?.rejected_rate ?? 0) + (d.sig_stats?.rejected_sig ?? 0);
-
-    // ── HERO: live status ──
-    updateHero(d);
-    // ── SUMMARY BAR: priority chips ──
-    updateSummary(d, peers);
-
     if (d.latency) {
       updateGauge('gaugeP50', d.latency.p50_ms, 50); updateGauge('gaugeP99', d.latency.p99_ms, 100); updateGauge('gaugeAvg', d.latency.avg_ms, 50);
       updateGaugeVal('gaugeP50Val', d.latency.p50_ms); updateGaugeVal('gaugeP99Val', d.latency.p99_ms); updateGaugeVal('gaugeAvgVal', d.latency.avg_ms);

@@ -51,34 +51,14 @@
   </div>
 </nav>
 
-<!-- ═════ HERO — Live Status ═════ -->
-<div class="hero" id="heroPane">
-  <div class="hero-glow"></div>
+<!-- ═════ HERO ═════ -->
+<div class="hero">
+  <img src="static/images/hero.png" alt="">
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-badge">
-      <span id="heroStatusDot" class="status-dot offline"></span>
-      <span id="heroStatusLabel" data-i18n="hero.badge">P2P Agent Mesh v0.5.1</span>
-    </div>
-    <div class="hero-metrics">
-      <div class="hero-metric">
-        <span class="hero-metric-value accent" id="heroPeers">-</span>
-        <span class="hero-metric-label" data-i18n="hero.peers">Peers</span>
-      </div>
-      <div class="hero-metric">
-        <span class="hero-metric-value green" id="heroMsgs">-</span>
-        <span class="hero-metric-label" data-i18n="hero.msgs">Messages</span>
-      </div>
-      <div class="hero-metric">
-        <span class="hero-metric-value orange" id="heroLatency">-</span>
-        <span class="hero-metric-label" data-i18n="hero.lat">p50</span>
-      </div>
-      <div class="hero-metric">
-        <span class="hero-metric-value purple" id="heroUptime">-</span>
-        <span class="hero-metric-label" data-i18n="hero.uptime">Uptime</span>
-      </div>
-    </div>
-    <p class="hero-tagline" data-i18n="hero.sub">Live dashboard — peer-to-peer agent communication</p>
+    <div class="hero-badge"><span id="heroStatusDot" class="status-dot offline"></span><span data-i18n="hero.badge">P2P Agent Mesh v0.5.1</span></div>
+    <h1 data-i18n="hero.title">Decentralized Mesh Transport</h1>
+    <p data-i18n="hero.sub">Live dashboard — peer-to-peer agent communication</p>
   </div>
 </div>
 
@@ -86,21 +66,6 @@
 
   <!-- ═══ DASHBOARD ═══ -->
   <section id="sec-dash" class="active">
-
-    <!-- PRIORITY SUMMARY — top-level status -->
-    <div class="summary-bar" id="summaryBar">
-      <div class="summary-status">
-        <span class="summary-dot" id="summaryDot"></span>
-        <span id="summaryText" data-i18n="summary.default">Mesh Online</span>
-      </div>
-      <div class="summary-chips">
-        <span class="summary-chip peers"><span class="chip-num" id="sumPeers">-</span><span class="chip-label">peers</span></span>
-        <span class="summary-chip msgs"><span class="chip-num" id="sumMsgs">-</span><span class="chip-label">msgs</span></span>
-        <span class="summary-chip rate"><span class="chip-num" id="sumRate">-</span><span class="chip-label">/min</span></span>
-        <span class="summary-chip uptime"><span class="chip-num" id="sumUptime">-</span><span class="chip-label">up</span></span>
-      </div>
-      <div class="summary-delta" id="summaryDelta"></div>
-    </div>
 
     <!-- ROW 1: Key metrics -->
     <div class="grid">
