@@ -106,6 +106,7 @@ async def startup():
 
         for agent_topic in ["agent:all", "agent:cryter", "agent:v2bot", "agent:forecaster", "agent:archivist"]:
             await mesh.transport.subscribe(agent_topic, on_agent_msg)
+            mesh._subscribed_topics.add(agent_topic)  # sync mesh-level topic tracking
 
         # Subscribe to echo for the live demo
         def on_msg(msg):

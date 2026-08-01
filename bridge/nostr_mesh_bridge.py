@@ -119,13 +119,21 @@ async def run_bridge():
                             seen_ids.clear()
                             seen_ids.add(eid)
 
-                        # Identify which agent
+                        # CRITICAL: filter by pubkey BEFORE anything else
+                        # nos.lol ignores the authors filter in REQ
                         pubkey = event.get("pubkey", "")
-                        agent_name = "unknown"
+                        agent_name = None
                         for name, pk in AGENTS.items():
                             if pk == pubkey:
                                 agent_name = name
                                 break
+
+                        if agent_name is None:
+                            # Unknown pubkey — silently skip, don't emit to mesh
+                            recv_count += 1
+                            if recv_count <= 3:
+                                print(f"[bridge] #{recv_count} [unknown] skipped (pubkey {pubkey[:12]}...)")
+                            continue
 
                         content = event.get("content", "")[:120].replace("\n", " ")
 
