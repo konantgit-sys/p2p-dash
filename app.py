@@ -423,7 +423,7 @@ async def get_timeline():
     except Exception as e:
         return {"status": "error", "error": str(e)}
 
-
+@app.get("/api/dht")
 async def get_dht():
     if not mesh:
         return {"error": "mesh not initialized"}

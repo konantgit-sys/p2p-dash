@@ -262,6 +262,7 @@ function updateSparkline(id, val, maxLen) {
 // ═══════════════════════════════════════════
 const API = '/api';
 let polling = true;
+const i18n = (typeof I18N !== 'undefined') ? I18N['en'] : null;
 async function f(url) { try { const r = await fetch(url); return await r.json(); } catch (e) { return { status: 'error', error: e.message }; } }
 const NAMES = { 'dashboard': '🎯 dash', 'cryter-agent': '🤖 cryter', 'forecaster-agent': '🤖 forecaster', 'archivist-agent': '🤖 archivist', 'mesh-connector': '🔗 conn', 'relay-mesh-bridge': '🌉 bridge' };
 function rn(id) { return NAMES[id] || id.slice(0, 20) + '...'; }
