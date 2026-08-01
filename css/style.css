@@ -296,11 +296,19 @@ section.active{display:block}
 @keyframes msgSlideIn{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:translateX(0)}}
 .msg-row:last-child{border-bottom:none}
 .msg-row:hover{background:rgba(0,200,255,.015)}
+.msg-badge{background:var(--accent);color:#000;font-size:9px;font-weight:700;padding:1px 5px;border-radius:8px;min-width:18px;text-align:center;flex-shrink:0}
+.msg-grouped{border-left:2px solid var(--accent);padding-left:14px}
 .msg-from{color:var(--accent2);min-width:130px;overflow:hidden;text-overflow:ellipsis;font-weight:500}
 .msg-cap{color:var(--accent);min-width:80px;font-weight:500}
-.msg-payload{color:var(--text2);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:'JetBrains Mono',monospace;font-size:11px}
+.msg-payload,.msg-body{color:var(--text2);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:'JetBrains Mono',monospace;font-size:11px}
 .msg-ts{color:var(--muted);min-width:60px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:10px}
 .msg-signature{color:var(--orange);min-width:70px;overflow:hidden;text-overflow:ellipsis;font-family:'JetBrains Mono',monospace;font-size:10px;opacity:.6}
+
+/* ══ DELTA INDICATORS ══ */
+.delta{display:inline-block;font-size:11px;font-family:'JetBrains Mono',monospace;font-weight:600;margin-left:6px;transition:all .3s ease;vertical-align:super}
+.delta.delta-up{color:var(--green)}
+.delta.delta-down{color:var(--red)}
+.delta.delta-flat{color:var(--muted);opacity:.5}
 
 /* ══ SEARCH ══ */
 .search-bar{padding:10px 18px;border-bottom:1px solid rgba(255,255,255,.04);display:flex;gap:8px}

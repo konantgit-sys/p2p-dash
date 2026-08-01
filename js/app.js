@@ -239,6 +239,37 @@ async function f(url) { try { const r = await fetch(url); return await r.json();
 const NAMES = { 'dashboard': '🎯 dash', 'cryter-agent': '🤖 cryter', 'forecaster-agent': '🤖 forecaster', 'archivist-agent': '🤖 archivist', 'mesh-connector': '🔗 conn', 'relay-mesh-bridge': '🌉 bridge' };
 function rn(id) { return NAMES[id] || id.slice(0, 20) + '...'; }
 function rt(ts) { return new Date((ts || 0) * 1000).toLocaleTimeString(currentLang === 'ru' ? 'ru-RU' : 'en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' }); }
+// ═══ Message Grouping — collapse repeated messages
+function groupMessages(msgs) {
+  if (!msgs.length) return [];
+  const groups = [], w = 3; // 3-second window
+  let cur = { topic: msgs[0].topic || '', capability: msgs[0].capability || '?', msgs: [msgs[0]], t0: msgs[0]._received_at || 0, t1: msgs[0]._received_at || 0 };
+  for (let i = 1; i < msgs.length; i++) {
+    const m = msgs[i], t = m._received_at || m.ts || 0;
+    const sameCap = m.capability === cur.capability;
+    const sameTopic = (m.topic || '') === cur.topic;
+    if (sameCap && sameTopic && (t - cur.t1) < w) { cur.msgs.push(m); cur.t1 = t; }
+    else { groups.push({...cur}); cur = { topic: m.topic || '', capability: m.capability || '?', msgs: [m], t0: t, t1: t }; }
+  }
+  groups.push({...cur});
+  return groups;
+}
+
+function renderGroupedMsg(g) {
+  const m = g.msgs[0], p = m.payload || {}, cap = g.capability, count = g.msgs.length;
+  const ts = g.t1 || m._received_at || 0, sig = (m.signature || '').slice(0, 8) + '...';
+  const body = p.body || p.text || p.message || '';
+  const json = encodeURIComponent(JSON.stringify(g.msgs.length === 1 ? m : g.msgs, null, 2));
+  const badge = count > 1 ? `<span class="msg-badge">×${count}</span>` : '';
+  return `<div class="msg-row ${count>1?'msg-grouped':''}" onclick="showDetail('${json}')" style="cursor:pointer" title="Click for details">
+    ${badge}
+    <span class="msg-cap">${cap}</span>
+    <span class="msg-body" title="${body.slice(0,80)}">${body.slice(0,60)}</span>
+    <span class="msg-signature">${sig}</span>
+    <span class="msg-ts">${rt(ts)}</span>
+  </div>`;
+}
+
 function renderMsg(msg) {
   const p = msg.payload || {}, from = msg.from || p.from || '?', cap = msg.capability || p.capability || msg.type || '?';
   const ts = msg.ts || msg._received_at || 0, sig = (msg.signature || '').slice(0, 8) + '...', ps = JSON.stringify(p).slice(0, 80);
@@ -321,6 +352,37 @@ function updateSummary(d, peers) {
   _prevRate = msgRate;
 }
 
+// ═══ PER-CARD DELTA INDICATORS ═══
+let _prevCard = {};
+function updateCardDeltas(d) {
+  const pairs = [
+    ['peersDelta', d.peers ?? 0, 'peers'],
+    ['msgsDelta', d.message_count ?? 0, 'msgs'],
+    ['walDelta', d.wal_count ?? 0, 'wal'],
+    ['dhtDelta', d.dht_entries ?? 0, 'dht'],
+    ['topicDelta', d.topic_count ?? 0, 'topics'],
+    ['rateDelta', d.msg_rate ?? 0, 'rate'],
+  ];
+  pairs.forEach(([elId, val, key]) => {
+    const el = document.getElementById(elId);
+    if (!el) return;
+    const prev = _prevCard[key];
+    if (prev === undefined) { _prevCard[key] = val; return; }
+    const diff = val - prev;
+    el.className = 'delta';
+    if (key === 'rate') {
+      if (diff > 0.1) { el.textContent = '▲+' + diff.toFixed(1); el.classList.add('delta-up'); }
+      else if (diff < -0.1) { el.textContent = '▼' + diff.toFixed(1); el.classList.add('delta-down'); }
+      else { el.textContent = '±0'; el.classList.add('delta-flat'); }
+    } else {
+      if (diff > 0) { el.textContent = '▲+' + diff; el.classList.add('delta-up'); }
+      else if (diff < 0) { el.textContent = '▼' + diff; el.classList.add('delta-down'); }
+      else { el.textContent = '±0'; el.classList.add('delta-flat'); }
+    }
+    _prevCard[key] = val;
+  });
+}
+
 function animateValueEl(el, target) {
   if (!el) return;
   const cur = parseInt(el.textContent) || 0;
@@ -355,6 +417,8 @@ async function updateAll() {
     updateHero(d);
     // ── SUMMARY BAR: priority chips ──
     updateSummary(d, peers);
+    // ── DELTA INDICATORS: card-level changes ──
+    updateCardDeltas(d);
 
     if (d.latency) {
       updateGauge('gaugeP50', d.latency.p50_ms, 50); updateGauge('gaugeP99', d.latency.p99_ms, 100); updateGauge('gaugeAvg', d.latency.avg_ms, 50);
@@ -452,7 +516,8 @@ async function updateMsgs() {
 function renderMsgList(msgs) {
   const list = document.getElementById('msgList');
   if (!msgs.length) { list.innerHTML = `<div style="padding:32px;text-align:center;color:var(--muted);font-size:13px">${t('log.waiting')}</div>`; return; }
-  list.innerHTML = msgs.map(renderMsg).join('');
+  const groups = groupMessages(msgs);
+  list.innerHTML = groups.map(g => renderGroupedMsg(g)).join('');
 }
 
 // ═══════════════════════════════════════════
