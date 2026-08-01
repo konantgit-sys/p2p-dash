@@ -2,3 +2,4 @@
 data/
 server.log
 bridge/bridge.log
+*.bak
