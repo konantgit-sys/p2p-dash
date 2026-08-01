@@ -273,6 +273,35 @@ async def api_root():
     return {"status": "ok", "service": "p2p-mesh-dashboard", "version": "0.5.1", "endpoints": ["/api/status", "/api/peers", "/api/topics", "/api/wal", "/api/timeline", "/api/dht", "/api/messages", "/api/messages/stats", "/api/metrics", "/api/metrics/history", "/api/discovery", "/api/system", "/api/emit", "/api/mesh/graph", "/"]}
 
 
+@app.get("/api/health")
+async def api_health():
+    """Public health endpoint — lightweight, no auth, for status pages."""
+    global _start_time, _pingpong_results
+    try:
+        if not mesh:
+            return {"mesh": "offline", "status": "error"}
+        s = mesh.status()
+        wal_count = mesh.wal.count() if hasattr(mesh, 'wal') else 0
+        tcp_peers = list(mesh.transport._tcp_connections.keys()) if hasattr(mesh.transport, '_tcp_connections') else []
+        peers = len(tcp_peers)
+        p50 = 0
+        if _pingpong_results:
+            vals = [r['latency_ms'] for r in _pingpong_results[-20:]]
+            p50 = sum(vals) / len(vals)
+        return {
+            "mesh": "online" if peers > 0 else "degraded",
+            "peers": peers,
+            "messages": s.get('message_count', 0),
+            "uptime_seconds": int(time.time() - _start_time) if _start_time else 0,
+            "latency_p50_ms": round(p50, 1),
+            "wal_entries": wal_count,
+            "topics": s.get('topic_count', 0),
+            "version": "0.5.1",
+        }
+    except Exception as e:
+        return {"mesh": "error", "error": str(e)}
+
+
 @app.get("/api/status")
 async def get_status():
     if not mesh:
