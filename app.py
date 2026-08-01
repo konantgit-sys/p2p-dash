@@ -291,11 +291,11 @@ async def api_health():
         return {
             "mesh": "online" if peers > 0 else "degraded",
             "peers": peers,
-            "messages": s.get('message_count', 0),
+            "messages": len(message_history),
             "uptime_seconds": int(time.time() - _start_time) if _start_time else 0,
             "latency_p50_ms": round(p50, 1),
             "wal_entries": wal_count,
-            "topics": s.get('topic_count', 0),
+            "topics": len(s.get('topics', [])),
             "version": "0.5.1",
         }
     except Exception as e:
