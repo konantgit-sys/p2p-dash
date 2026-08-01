@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P2P Agent Mesh — Status</title>
+<style>
+:root {
+  --bg: #0b0f19;
+  --card: #111827;
+  --accent: #00c8ff;
+  --green: #22c55e;
+  --orange: #f97316;
+  --red: #ef4444;
+  --muted: #6b7280;
+  --text: #e5e7eb;
+  --text2: #9ca3af;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.container {
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+}
+.logo {
+  display: flex; align-items:center; justify-content:center; gap:10px;
+  margin-bottom: 32px;
+}
+.logo svg { width:32px; height:32px; }
+.status-dot {
+  width: 16px; height: 16px; border-radius: 50%;
+  display: inline-block; margin-right: 6px;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.online { background: var(--green); box-shadow: 0 0 12px rgba(34,197,94,.4); }
+.degraded { background: var(--orange); box-shadow: 0 0 12px rgba(249,115,22,.4); }
+.offline { background: var(--red); box-shadow: 0 0 12px rgba(239,68,68,.4); }
+h1 { font-size: 22px; font-weight: 600; margin-bottom: 4px; }
+.subtitle { color: var(--muted); font-size: 13px; margin-bottom: 28px; }
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.metric-card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 16px 12px;
+  border: 1px solid rgba(255,255,255,.04);
+}
+.metric-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+.metric-label {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 6px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.bar {
+  display: flex; gap: 8px;
+  align-items: center; justify-content: center;
+  padding: 10px 16px;
+  background: var(--card);
+  border-radius: 8px;
+  font-size: 12px;
+  color: var(--text2);
+  margin-bottom: 20px;
+  border: 1px solid rgba(255,255,255,.04);
+}
+.bar b { color: var(--text); }
+.footer {
+  font-size: 11px; color: var(--muted);
+  margin-top: 32px;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.refresh {
+  font-size: 11px; color: var(--muted);
+  margin-top: 12px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="logo">
+    <svg viewBox="0 0 32 32" fill="none"><circle cx="8" cy="8" r="3" fill="#00c8ff"/><circle cx="24" cy="8" r="3" fill="#22c55e"/><circle cx="16" cy="22" r="3" fill="#f97316"/><line x1="8" y1="8" x2="16" y2="22" stroke="#00c8ff" opacity=".5" stroke-width="1"/><line x1="24" y1="8" x2="16" y2="22" stroke="#22c55e" opacity=".5" stroke-width="1"/></svg>
+    <h1>P2P Agent Mesh</h1>
+  </div>
+  <div id="statusLine">
+    <span class="status-dot" id="dot"></span>
+    <span id="statusText">Checking...</span>
+  </div>
+  <div class="subtitle">Decentralized agent communication layer</div>
+
+  <div class="bar">
+    <span>Uptime: <b id="uptime">--</b></span>
+    <span style="color:var(--muted)">·</span>
+    <span>P50: <b id="p50">--</b></span>
+    <span style="color:var(--muted)">·</span>
+    <span>Version: <b>v0.5.1</b></span>
+  </div>
+
+  <div class="metrics">
+    <div class="metric-card">
+      <div class="metric-value" id="peers">--</div>
+      <div class="metric-label">Peers</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-value" id="msgs">--</div>
+      <div class="metric-label">Messages</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-value" id="topics">--</div>
+      <div class="metric-label">Topics</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    Powered by <a href="/">P2P Agent Mesh</a> · 
+    <a href="https://github.com/snin-ai/p2p-agent-mesh">GitHub</a> ·
+    API: <a href="/api/health">/api/health</a>
+  </div>
+  <div class="refresh" id="refresh">Auto-refresh: 10s</div>
+</div>
+
+<script>
+const API = '/api/health';
+async function fetchStatus() {
+  try {
+    const r = await fetch(API, { cache: 'no-store' });
+    const d = await r.json();
+
+    // Status dot
+    const dot = document.getElementById('dot');
+    dot.className = 'status-dot ' + (d.mesh === 'online' ? 'online' : d.mesh === 'degraded' ? 'degraded' : 'offline');
+    document.getElementById('statusText').textContent =
+      d.mesh === 'online' ? 'Mesh Online' : d.mesh === 'degraded' ? 'Mesh Degraded' : 'Mesh Offline';
+
+    // Metrics
+    document.getElementById('peers').textContent = d.peers ?? '--';
+    document.getElementById('msgs').textContent = d.messages ?? '--';
+    document.getElementById('topics').textContent = d.topics ?? '--';
+
+    // Uptime
+    const u = d.uptime_seconds || 0;
+    const h = Math.floor(u / 3600), m = Math.floor((u % 3600) / 60);
+    document.getElementById('uptime').textContent = h > 0 ? `${h}h ${m}m` : `${m}m`;
+
+    // P50
+    document.getElementById('p50').textContent = d.latency_p50_ms ? d.latency_p50_ms + 'ms' : '--';
+
+    document.getElementById('refresh').textContent = 'Updated: ' + new Date().toLocaleTimeString();
+  } catch(e) {
+    document.getElementById('dot').className = 'status-dot offline';
+    document.getElementById('statusText').textContent = 'Cannot reach mesh';
+    document.getElementById('refresh').textContent = 'Connection failed';
+  }
+}
+fetchStatus();
+setInterval(fetchStatus, 10000);
+</script>
+</body>
+</html>

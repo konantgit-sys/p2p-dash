@@ -610,6 +610,11 @@ from pathlib import Path
 site_dir = Path("/home/agent/data/sites/p2p-dash")
 
 
+@app.get("/status", response_class=HTMLResponse)
+async def status_page():
+    return HTMLResponse((site_dir / "status.html").read_text())
+
+
 @app.get("/", response_class=HTMLResponse)
 async def index():
     return HTMLResponse((site_dir / "index.html").read_text())
