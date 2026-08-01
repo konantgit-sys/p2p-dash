@@ -153,21 +153,48 @@ function exportLog() {
 // ═══════════════════════════════════════════
 // ═══ CHART UTILITIES
 // ═══════════════════════════════════════════
-function drawLineChart(canvasId, data, color1, color2, minY, maxY) {
-  const c = document.getElementById(canvasId); if (!c || !data.length) return;
+function drawMultiLineChart(canvasId, series, labels) {
+  const c = document.getElementById(canvasId); if (!c || !series.length) return;
   const ctx = c.getContext('2d'), W = c.width = c.offsetWidth, H = c.height = c.offsetHeight;
-  ctx.clearRect(0, 0, W, H); if (data.length < 2) return;
-  const yMin = minY ?? Math.min(...data) * .9, yMax = maxY ?? Math.max(...data) * 1.1 || 1;
-  const range = yMax - yMin || 1, stepX = W / (data.length - 1);
-  const grad = ctx.createLinearGradient(0, 0, 0, H);
-  grad.addColorStop(0, color1 + '30'); grad.addColorStop(1, 'transparent');
-  ctx.beginPath(); ctx.moveTo(0, H);
-  data.forEach((v, i) => ctx.lineTo(i * stepX, H - (v - yMin) / range * H));
-  ctx.lineTo(W, H); ctx.closePath(); ctx.fillStyle = grad; ctx.fill();
-  ctx.beginPath();
-  data.forEach((v, i) => { const x = i * stepX, y = H - (v - yMin) / range * H; if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y); });
-  ctx.strokeStyle = color1; ctx.lineWidth = 2; ctx.stroke();
-  data.forEach((v, i) => { const x = i * stepX, y = H - (v - yMin) / range * H; ctx.beginPath(); ctx.arc(x, y, 2.5, 0, Math.PI * 2); ctx.fillStyle = color1; ctx.fill(); });
+  ctx.clearRect(0, 0, W, H);
+  const allVals = series.flatMap(s => s.data);
+  if (allVals.length < 2) return;
+  const yMin = 0, yMax = Math.max(...allVals, 1) * 1.1 || 1;
+  const range = yMax - yMin || 1;
+  const n = Math.max(...series.map(s => s.data.length));
+  const stepX = W / Math.max(n - 1, 1);
+  
+  // Grid lines
+  ctx.strokeStyle = 'rgba(255,255,255,.03)'; ctx.lineWidth = 1;
+  for (let y = 0; y <= 4; y++) {
+    const gy = H * y / 4;
+    ctx.beginPath(); ctx.moveTo(0, gy); ctx.lineTo(W, gy); ctx.stroke();
+  }
+  
+  series.forEach(s => {
+    if (s.data.length < 2) return;
+    // Fill
+    const grad = ctx.createLinearGradient(0, 0, 0, H);
+    grad.addColorStop(0, s.color + '20'); grad.addColorStop(1, 'transparent');
+    ctx.beginPath(); ctx.moveTo(0, H);
+    s.data.forEach((v, i) => ctx.lineTo(i * stepX, H - (v - yMin) / range * H));
+    ctx.lineTo(s.data.length * stepX, H); ctx.closePath(); ctx.fillStyle = grad; ctx.fill();
+    // Line
+    ctx.beginPath();
+    s.data.forEach((v, i) => { const x = i * stepX, y = H - (v - yMin) / range * H; i ? ctx.lineTo(x, y) : ctx.moveTo(x, y); });
+    ctx.strokeStyle = s.color; ctx.lineWidth = 2; ctx.stroke();
+    // Dots
+    s.data.forEach((v, i) => {
+      const x = i * stepX, y = H - (v - yMin) / range * H;
+      ctx.beginPath(); ctx.arc(x, y, 2, 0, Math.PI * 2); ctx.fillStyle = s.color; ctx.fill();
+    });
+  });
+  
+  // Legend on-canvas
+  const el = document.getElementById(canvasId + 'Legend');
+  if (el) el.innerHTML = labels.map((l, i) => 
+    `<span style="color:${series[i].color}">● ${l}</span>`
+  ).join('&nbsp;&nbsp;');
 }
 
 function drawLatHistory() {
@@ -383,6 +410,39 @@ function updateCardDeltas(d) {
   });
 }
 
+// ═══ NOTIFICATION DOCK ═══
+let _notifEvents = [], _notifPrev = {};
+function notifyDockAdd(msg, type) {
+  const now = new Date().toLocaleTimeString();
+  const colors = { peer: 'var(--accent2)', spike: 'var(--orange)', join: 'var(--green)', leave: 'var(--red)', info: 'var(--muted)' };
+  const dot = colors[type] || colors.info;
+  _notifEvents.unshift({ msg, type, ts: now });
+  if (_notifEvents.length > 50) _notifEvents.length = 50;
+  const list = document.getElementById('notifyList');
+  if (!list) return;
+  list.innerHTML = _notifEvents.slice(0, 20).map(e =>
+    `<div style="display:flex;gap:6px;align-items:flex-start;padding:6px 8px;background:rgba(255,255,255,.02);border-radius:6px;font-size:11px">
+      <span style="color:${dot};font-weight:700">●</span>
+      <span style="flex:1;color:var(--text2)">${e.msg}</span>
+      <span style="color:var(--muted);font-size:9px">${e.ts}</span>
+    </div>`
+  ).join('');
+  document.getElementById('notifyCount').textContent = _notifEvents.length;
+}
+function notifyCheck(d) {
+  const p = _notifPrev;
+  if (p.peers !== undefined && d.peers !== p.peers) {
+    const diff = d.peers - p.peers;
+    if (diff > 0) notifyDockAdd(`+${diff} peer${diff>1?'s':''} joined (${d.peers} total)`, 'join');
+    else notifyDockAdd(`${diff} peer left (${d.peers} total)`, 'leave');
+  }
+  if (p.rate !== undefined && d.msg_rate > p.rate * 3 && d.msg_rate > 5)
+    notifyDockAdd(`⚡ Rate spike: ${d.msg_rate.toFixed(1)} msg/min`, 'spike');
+  if (p.wal !== undefined && d.wal_count - p.wal > 200)
+    notifyDockAdd(`📦 WAL +${d.wal_count - p.wal} entries`, 'info');
+  _notifPrev = { peers: d.peers, rate: d.msg_rate, wal: d.wal_count };
+}
+
 function animateValueEl(el, target) {
   if (!el) return;
   const cur = parseInt(el.textContent) || 0;
@@ -419,6 +479,8 @@ async function updateAll() {
     updateSummary(d, peers);
     // ── DELTA INDICATORS: card-level changes ──
     updateCardDeltas(d);
+    // ── NOTIFICATION DOCK: event tracking ──
+    notifyCheck(d);
 
     if (d.latency) {
       updateGauge('gaugeP50', d.latency.p50_ms, 50); updateGauge('gaugeP99', d.latency.p99_ms, 100); updateGauge('gaugeAvg', d.latency.avg_ms, 50);
@@ -432,13 +494,18 @@ async function updateAll() {
     document.getElementById('walPreview').innerHTML = '';
     if (d.msg_rate != null) {
       historyPoints.push(d.msg_rate); if (historyPoints.length > 30) historyPoints.shift();
-      drawLineChart('rateChart', historyPoints, getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#00c8ff', 'rgba(0,200,255,', 0, Math.max(...historyPoints, 5));
+      const color = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#00c8ff';
+      if (historyPoints.length >= 2) drawMultiLineChart('rateChart', [{ data: historyPoints, color: color }], ['msg/min']);
     }
   }
 
   if (hist.status === 'ok' && hist.data.points.length >= 2) {
     const pts = hist.data.points;
-    drawLineChart('trendChart', pts.map(p => p.msg_rate || 0), '#22c55e', 'rgba(34,197,94,', 0, Math.max(...pts.map(p => p.msg_rate || 0), 5));
+    drawMultiLineChart('trendChart', [
+      { data: pts.map(p => p.msg_count || 0), color: '#00c8ff' },
+      { data: pts.map(p => p.peers || 0), color: '#22c55e' },
+      { data: pts.map(p => (p.msg_rate || 0) * 10), color: '#f97316' },
+    ], ['msgs', 'peers', 'rate×10']);
   }
 
   // ── Agent-to-Agent ping-pong ──
