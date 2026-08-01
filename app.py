@@ -65,7 +65,7 @@ async def startup():
     global mesh
     db_path = "/tmp/p2p_dash_mesh.db"
     mesh = AgentMesh("dashboard", ["dash", "ping", "echo"],
-                     db_path=db_path)
+                     db_path=db_path, port=39001)
     try:
         await mesh.start()
         print(f"[dash] AgentMesh started: {mesh.did}")
@@ -104,7 +104,7 @@ async def startup():
             except Exception as e:
                 print(f"[dash] on_agent_msg error: {e}")
 
-        for agent_topic in ["agent:all", "agent:cryter", "agent:v2bot", "agent:forecaster", "agent:archivist"]:
+        for agent_topic in ["agent:all", "agent:cryter", "agent:v2bot", "agent:forecaster", "agent:archivist", "agent:observer"]:
             await mesh.transport.subscribe(agent_topic, on_agent_msg)
             mesh._subscribed_topics.add(agent_topic)  # sync mesh-level topic tracking
 
