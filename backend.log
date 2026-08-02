@@ -83,3 +83,116 @@ INFO:     Uvicorn running on http://0.0.0.0:8090 (Press CTRL+C to quit)
 INFO:     84.54.29.45:0 - "GET / HTTP/1.1" 200 OK
 [dash] AGENT MSG: did:snin:f82ba9e type=event
 INFO:     127.0.0.1:35300 - "POST /api/emit HTTP/1.1" 200 OK
+[start] mesh_peer already running (PID=221107)
+[start] bridge already running (PID=221108)
+/home/agent/data/sites/p2p-dash/app.py:77: DeprecationWarning: 
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+        
+  @app.on_event("startup")
+INFO:     Started server process [245878]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8090 (Press CTRL+C to quit)
+[dash] Restored total_messages=2438
+[dash] total_messages=2438
+[transport] Started. PeerID: did:p2p:dashboard... TCP: 127.0.0.1:39001 [PLAIN]
+[transport] subscribe ADDED _dht to _bus (now 1 subs, _bus keys: ['_dht'])
+[transport] Subscribed to _dht
+[agent:dashboard] Started. DID=did:snin:7f539187f279373...
+[dash] AgentMesh started: did:snin:7f539187f2793738
+[dash] Relay mode enabled
+[dash] P2P port saved: 39001
+[transport] subscribe ADDED agent:all to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all'])
+[transport] Subscribed to agent:all
+[transport] subscribe ADDED agent:cryter to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter'])
+[transport] Subscribed to agent:cryter
+[transport] subscribe ADDED agent:v2bot to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:v2bot'])
+[transport] Subscribed to agent:v2bot
+[transport] subscribe ADDED agent:forecaster to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:v2bot', 'agent:forecaster'])
+[transport] Subscribed to agent:forecaster
+[transport] subscribe ADDED agent:archivist to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:v2bot', 'agent:forecaster', 'agent:archivist'])
+[transport] Subscribed to agent:archivist
+[transport] subscribe ADDED agent:observer to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:v2bot', 'agent:forecaster', 'agent:archivist', 'agent:observer'])
+[transport] Subscribed to agent:observer
+[transport] subscribe ADDED agent:echo to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:v2bot', 'agent:forecaster', 'agent:archivist', 'agent:observer', 'agent:echo'])
+[transport] Subscribed to agent:echo
+[dash] Subscribed to echo
+[dash] AGENT MSG: did:snin:7f53918 type=event
+INFO:     127.0.0.1:38956 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:7f53918 type=event
+INFO:     127.0.0.1:60810 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:7f53918 type=event
+INFO:     127.0.0.1:54822 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:7f53918 type=event
+[dash] Heartbeat sent (uptime: 30.1s)
+[dash] AGENT MSG: did:snin:7f53918 type=event
+INFO:     127.0.0.1:40946 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:7f53918 type=event
+INFO:     127.0.0.1:50512 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:7f53918 type=event
+INFO:     127.0.0.1:57266 - "POST /api/emit HTTP/1.1" 200 OK
+[start] app.py process found (pgrep) — exiting
+[start] Sun Aug  2 14:57:26 UTC 2026 — acquired lock, starting
+[start] mesh_peer already running
+[start] bridge already running
+/home/agent/data/sites/p2p-dash/app.py:77: DeprecationWarning: 
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+        
+  @app.on_event("startup")
+INFO:     Started server process [246576]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8090 (Press CTRL+C to quit)
+[dash] Restored total_messages=2446
+[dash] total_messages=2446
+[transport] Started. PeerID: did:p2p:dashboard... TCP: 127.0.0.1:39001 [PLAIN]
+[transport] subscribe ADDED _dht to _bus (now 1 subs, _bus keys: ['_dht'])
+[transport] Subscribed to _dht
+[agent:dashboard] Started. DID=did:snin:4c378fb3bf646ee...
+[dash] AgentMesh started: did:snin:4c378fb3bf646ee2
+[dash] Relay mode enabled
+[dash] P2P port saved: 39001
+[transport] subscribe ADDED agent:all to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all'])
+[transport] Subscribed to agent:all
+[transport] subscribe ADDED agent:cryter to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter'])
+[transport] Subscribed to agent:cryter
+[transport] subscribe ADDED agent:v2bot to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:v2bot'])
+[transport] Subscribed to agent:v2bot
+[transport] subscribe ADDED agent:forecaster to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:v2bot', 'agent:forecaster'])
+[transport] Subscribed to agent:forecaster
+[transport] subscribe ADDED agent:archivist to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:v2bot', 'agent:forecaster', 'agent:archivist'])
+[transport] Subscribed to agent:archivist
+[transport] subscribe ADDED agent:observer to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:v2bot', 'agent:forecaster', 'agent:archivist', 'agent:observer'])
+[transport] Subscribed to agent:observer
+[transport] subscribe ADDED agent:echo to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:v2bot', 'agent:forecaster', 'agent:archivist', 'agent:observer', 'agent:echo'])
+[transport] Subscribed to agent:echo
+[dash] Subscribed to echo
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:39546 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39562 - "GET /api/health HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:51690 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:39048 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+[dash] Heartbeat sent (uptime: 30.3s)
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:41616 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38474 - "GET /api/health HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:38478 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:38718 - "POST /api/emit HTTP/1.1" 200 OK
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:4c378fb type=event
+[dash] Heartbeat sent (uptime: 60.3s)
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:33846 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:54258 - "POST /api/emit HTTP/1.1" 200 OK
