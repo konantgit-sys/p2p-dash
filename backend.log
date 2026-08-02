@@ -2436,3 +2436,297 @@ INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
 INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
 INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
 [start] another start.sh is running (flock busy) — exiting
+[start] Sun Aug  2 15:18:27 UTC 2026 — acquired lock, starting
+[start] mesh_peer already running
+[start] bridge already running
+/home/agent/data/sites/p2p-dash/app.py:77: DeprecationWarning: 
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+        
+  @app.on_event("startup")
+INFO:     Started server process [270117]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8090 (Press CTRL+C to quit)
+[dash] Restored total_messages=2865
+[dash] total_messages=2865
+[transport] Started. PeerID: did:p2p:dashboard... TCP: 127.0.0.1:39001 [PLAIN]
+[transport] subscribe ADDED _dht to _bus (now 1 subs, _bus keys: ['_dht'])
+[transport] Subscribed to _dht
+[agent] DHT accepted (signed): did:snin:ee0a820f576d71b0
+[agent:dashboard] Started. DID=did:snin:ee0a820f576d71b...
+[dash] AgentMesh started: did:snin:ee0a820f576d71b0
+[dash] Relay mode enabled
+[dash] P2P port saved: 39001
+[transport] subscribe ADDED agent:all to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all'])
+[transport] Subscribed to agent:all
+[transport] subscribe ADDED agent:cryter to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter'])
+[transport] Subscribed to agent:cryter
+[transport] subscribe ADDED agent:v2bot to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:v2bot'])
+[transport] Subscribed to agent:v2bot
+[transport] subscribe ADDED agent:forecaster to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:v2bot', 'agent:forecaster'])
+[transport] Subscribed to agent:forecaster
+[transport] subscribe ADDED agent:archivist to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:v2bot', 'agent:forecaster', 'agent:archivist'])
+[transport] Subscribed to agent:archivist
+[transport] subscribe ADDED agent:observer to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:v2bot', 'agent:forecaster', 'agent:archivist', 'agent:observer'])
+[transport] Subscribed to agent:observer
+[transport] subscribe ADDED agent:echo to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:v2bot', 'agent:forecaster', 'agent:archivist', 'agent:observer', 'agent:echo'])
+[transport] Subscribed to agent:echo
+[dash] Subscribed to echo
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+[dash] DHT: added cryter via bridge
+[dash] AGENT MSG: did:snin:ee0a820 type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:ee0a820 type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:ee0a820 type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:ee0a820 type=event
+INFO:     127.0.0.1:39028 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:ee0a820 type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:ee0a820 type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:ee0a820 type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:ee0a820 type=event
+INFO:     127.0.0.1:55654 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:ee0a820 type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:ee0a820 type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:ee0a820 type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:ee0a820 type=event
+INFO:     127.0.0.1:52340 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:ee0a820 type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:ee0a820 type=event
+[dash] Heartbeat sent (uptime: 30.4s)
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:ee0a820 type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:ee0a820 type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:ee0a820 type=event
+INFO:     127.0.0.1:58566 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:ee0a820 type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[start] Sun Aug  2 15:20:27 UTC 2026 — acquired lock, starting
+[start] mesh_peer PID=293798
+[start] bridge PID=293801
+/home/agent/data/sites/p2p-dash/app.py:77: DeprecationWarning: 
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+        
+  @app.on_event("startup")
+INFO:     Started server process [293777]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8090 (Press CTRL+C to quit)
+[dash] Restored total_messages=2884
+[dash] total_messages=2884
+[transport] Started. PeerID: did:p2p:dashboard... TCP: 127.0.0.1:39001 [PLAIN]
+[transport] subscribe ADDED _dht to _bus (now 1 subs, _bus keys: ['_dht'])
+[transport] Subscribed to _dht
+[agent] DHT accepted (signed): did:snin:2191cbc0cf1595d8
+[agent:dashboard] Started. DID=did:snin:2191cbc0cf1595d...
+[dash] AgentMesh started: did:snin:2191cbc0cf1595d8
+[dash] Relay mode enabled
+[dash] P2P port saved: 39001
+[transport] subscribe ADDED agent:all to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all'])
+[transport] Subscribed to agent:all
+[transport] subscribe ADDED agent:cryter to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter'])
+[transport] Subscribed to agent:cryter
+[transport] subscribe ADDED agent:v2bot to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:v2bot'])
+[transport] Subscribed to agent:v2bot
+[transport] subscribe ADDED agent:forecaster to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:v2bot', 'agent:forecaster'])
+[transport] Subscribed to agent:forecaster
+[transport] subscribe ADDED agent:archivist to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:v2bot', 'agent:forecaster', 'agent:archivist'])
+[transport] Subscribed to agent:archivist
+[transport] subscribe ADDED agent:observer to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:v2bot', 'agent:forecaster', 'agent:archivist', 'agent:observer'])
+[transport] Subscribed to agent:observer
+[transport] subscribe ADDED agent:echo to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:v2bot', 'agent:forecaster', 'agent:archivist', 'agent:observer', 'agent:echo'])
+[transport] Subscribed to agent:echo
+[dash] Subscribed to echo
+[transport] Client identified: did:p2p:observer-1 (was tcp:127.0.0.1:46912)
+[dash] AGENT MSG: did:snin:2191cbc type=event
+INFO:     127.0.0.1:60490 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     84.54.29.45:0 - "GET / HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:2191cbc type=event
+INFO:     127.0.0.1:39114 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:2191cbc type=event
+[dash] Heartbeat sent (uptime: 30.8s)
+[dash] AGENT MSG: did:snin:2191cbc type=event
+INFO:     127.0.0.1:34288 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:2191cbc type=event
+INFO:     127.0.0.1:36270 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:2191cbc type=event
+INFO:     127.0.0.1:50304 - "POST /api/emit HTTP/1.1" 200 OK
+[agent] DHT accepted (signed): did:snin:2191cbc0cf1595d8
+[dash] AGENT MSG: did:snin:2191cbc type=event
+[dash] Heartbeat sent (uptime: 60.8s)
+[dash] AGENT MSG: did:snin:2191cbc type=event
+INFO:     127.0.0.1:42038 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:2191cbc type=event
+INFO:     127.0.0.1:40688 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40692 - "GET /api/health HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:2191cbc type=event
+INFO:     127.0.0.1:33252 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:2191cbc type=event
+[dash] Heartbeat sent (uptime: 90.8s)
+[dash] AGENT MSG: did:snin:2191cbc type=event
+INFO:     127.0.0.1:34628 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:2191cbc type=event
+INFO:     127.0.0.1:55298 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38596 - "GET /api/health HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:2191cbc type=event
+INFO:     127.0.0.1:38616 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51002 - "GET /api/dht HTTP/1.1" 200 OK
+[agent] DHT accepted (signed): did:snin:2191cbc0cf1595d8
+[dash] AGENT MSG: did:snin:2191cbc type=event
+[dash] Heartbeat sent (uptime: 120.8s)
+[dash] AGENT MSG: did:snin:2191cbc type=event
+INFO:     127.0.0.1:51012 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:2191cbc type=event
+INFO:     127.0.0.1:53920 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:2191cbc type=event
+INFO:     127.0.0.1:50852 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:2191cbc type=event
+[dash] Heartbeat sent (uptime: 150.8s)
+[dash] AGENT MSG: did:snin:2191cbc type=event
+INFO:     127.0.0.1:44972 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43690 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43700 - "GET /api/discovery HTTP/1.1" 200 OK
