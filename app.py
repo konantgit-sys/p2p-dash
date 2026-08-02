@@ -40,8 +40,11 @@ message_history: list[dict] = []
 MAX_HISTORY = 200
 total_messages = 0  # never-capped counter (survives history pruning)
 
-# Persist total_messages across restarts
+# Persist state across restarts
 _TOTAL_FILE = Path(__file__).parent / "total_messages.json"
+_METRICS_FILE = Path(__file__).parent / "metrics_history.json"
+_PINGPONG_FILE = Path(__file__).parent / "pingpong_results.json"
+
 def _load_total():
     if _TOTAL_FILE.exists():
         try:
@@ -49,8 +52,35 @@ def _load_total():
         except Exception:
             return 0
     return 0
+
 def _save_total():
     _TOTAL_FILE.write_text(json.dumps({"total": total_messages}))
+
+def _load_metrics():
+    if _METRICS_FILE.exists():
+        try:
+            data = json.loads(_METRICS_FILE.read_text())
+            return data.get("points", [])
+        except Exception:
+            return []
+    return []
+
+def _save_metrics():
+    pts = [{"ts": p["ts"], "msg_count": p.get("msg_count", 0),
+            "wal_count": p.get("wal_count", 0), "peers": p.get("peers", 0),
+            "msg_rate": p.get("msg_rate", 0)} for p in _metrics_history]
+    _METRICS_FILE.write_text(json.dumps({"points": pts, "saved_at": time.time()}))
+
+def _load_pingpong():
+    if _PINGPONG_FILE.exists():
+        try:
+            return json.loads(_PINGPONG_FILE.read_text()).get("results", [])
+        except Exception:
+            return []
+    return []
+
+def _save_pingpong():
+    _PINGPONG_FILE.write_text(json.dumps({"results": _pingpong_results, "saved_at": time.time()}))
 
 # Latency tracking (last 1000 request durations in ms)
 _request_latencies: list[float] = []
@@ -170,7 +200,7 @@ async def startup():
 
 
 async def heartbeat_loop():
-    """Периодический heartbeat — показывает что mesh жив."""
+    """Периодический heartbeat — показывает что mesh жив. + persist state."""
     while True:
         await asyncio.sleep(30)
         if mesh and mesh._running:
@@ -184,6 +214,13 @@ async def heartbeat_loop():
                 print(f"[dash] Heartbeat sent (uptime: {round(time.time() - _start_time, 1)}s)")
             except Exception as e:
                 print(f"[dash] Heartbeat error: {e}")
+            # Persist metrics + pingpong every 30s
+            try:
+                _save_metrics()
+                _save_pingpong()
+                _save_total()
+            except Exception as e:
+                print(f"[dash] Persist error: {e}")
 
 
 _start_time = time.time()
@@ -642,10 +679,23 @@ async def get_pingpong():
 from pathlib import Path
 site_dir = Path("/home/agent/data/sites/p2p-dash")
 
-# Load persisted total_messages counter
+# Load persisted state
 total_messages = _load_total()
 if total_messages > 0:
     print(f"[dash] Restored total_messages={total_messages}")
+
+# Restore metrics history (for chart continuity across restarts)
+_loaded_metrics = _load_metrics()
+if _loaded_metrics:
+    for pt in _loaded_metrics:
+        _metrics_history.append(pt)
+    print(f"[dash] Restored metrics_history: {len(_loaded_metrics)} points")
+
+# Restore pingpong results
+_loaded_pingpong = _load_pingpong()
+if _loaded_pingpong:
+    _pingpong_results.extend(_loaded_pingpong)
+    print(f"[dash] Restored pingpong_results: {len(_loaded_pingpong)} points")
 
 
 @app.get("/status", response_class=HTMLResponse)
