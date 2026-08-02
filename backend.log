@@ -38,3 +38,48 @@ INFO:     127.0.0.1:47304 - "GET /api/health HTTP/1.1" 200 OK
 INFO:     127.0.0.1:47306 - "POST /api/emit HTTP/1.1" 200 OK
 [dash] AGENT MSG: did:snin:4148d3a type=event
 INFO:     127.0.0.1:54680 - "POST /api/emit HTTP/1.1" 200 OK
+[start] mesh_peer already running (PID=221107)
+[start] bridge already running (PID=221108)
+  File "/home/agent/data/sites/p2p-dash/app.py", line 649
+    global total_messages
+    ^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: annotated name 'total_messages' can't be global
+[start] mesh_peer already running (PID=221107)
+[start] bridge already running (PID=221108)
+/home/agent/data/sites/p2p-dash/app.py:77: DeprecationWarning: 
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+        
+  @app.on_event("startup")
+INFO:     Started server process [221817]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8090 (Press CTRL+C to quit)
+[dash] total_messages=0
+[transport] Started. PeerID: did:p2p:dashboard... TCP: 127.0.0.1:39001 [PLAIN]
+[transport] subscribe ADDED _dht to _bus (now 1 subs, _bus keys: ['_dht'])
+[transport] Subscribed to _dht
+[agent:dashboard] Started. DID=did:snin:f82ba9e4c0a15b7...
+[dash] AgentMesh started: did:snin:f82ba9e4c0a15b7e
+[dash] Relay mode enabled
+[dash] P2P port saved: 39001
+[transport] subscribe ADDED agent:all to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all'])
+[transport] Subscribed to agent:all
+[transport] subscribe ADDED agent:cryter to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter'])
+[transport] Subscribed to agent:cryter
+[transport] subscribe ADDED agent:v2bot to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:v2bot'])
+[transport] Subscribed to agent:v2bot
+[transport] subscribe ADDED agent:forecaster to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:v2bot', 'agent:forecaster'])
+[transport] Subscribed to agent:forecaster
+[transport] subscribe ADDED agent:archivist to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:v2bot', 'agent:forecaster', 'agent:archivist'])
+[transport] Subscribed to agent:archivist
+[transport] subscribe ADDED agent:observer to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:v2bot', 'agent:forecaster', 'agent:archivist', 'agent:observer'])
+[transport] Subscribed to agent:observer
+[transport] subscribe ADDED agent:echo to _bus (now 1 subs, _bus keys: ['_dht', 'agent:all', 'agent:cryter', 'agent:v2bot', 'agent:forecaster', 'agent:archivist', 'agent:observer', 'agent:echo'])
+[transport] Subscribed to agent:echo
+[dash] Subscribed to echo
+INFO:     84.54.29.45:0 - "GET / HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:f82ba9e type=event
+INFO:     127.0.0.1:35300 - "POST /api/emit HTTP/1.1" 200 OK

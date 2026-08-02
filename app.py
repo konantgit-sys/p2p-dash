@@ -10,6 +10,7 @@ import os
 import statistics
 import sys
 import time
+from pathlib import Path
 
 # Add project to path
 sys.path.insert(0, "/home/agent/data/projects/p2p-agent-mesh")
@@ -37,6 +38,19 @@ app.add_middleware(
 mesh: AgentMesh = None
 message_history: list[dict] = []
 MAX_HISTORY = 200
+total_messages = 0  # never-capped counter (survives history pruning)
+
+# Persist total_messages across restarts
+_TOTAL_FILE = Path(__file__).parent / "total_messages.json"
+def _load_total():
+    if _TOTAL_FILE.exists():
+        try:
+            return json.loads(_TOTAL_FILE.read_text()).get("total", 0)
+        except Exception:
+            return 0
+    return 0
+def _save_total():
+    _TOTAL_FILE.write_text(json.dumps({"total": total_messages}))
 
 # Latency tracking (last 1000 request durations in ms)
 _request_latencies: list[float] = []
@@ -97,6 +111,7 @@ async def startup():
                 msg = json.loads(data) if isinstance(data, bytes) else data
                 msg["_received_at"] = time.time()
                 msg["_topic"] = "agent:*"
+                global total_messages; total_messages += 1; _save_total()
                 message_history.append(msg)
                 if len(message_history) > MAX_HISTORY:
                     message_history[:] = message_history[-MAX_HISTORY:]
@@ -112,6 +127,7 @@ async def startup():
         def on_msg(msg):
             """Синхронный callback — вызывается из transport."""
             msg["_received_at"] = time.time()
+            global total_messages; total_messages += 1; _save_total()
             message_history.append(msg)
             if len(message_history) > MAX_HISTORY:
                 message_history[:] = message_history[-MAX_HISTORY:]
@@ -222,6 +238,7 @@ async def get_metrics_history():
 @app.get("/api/messages/stats")
 async def get_message_stats():
     """Message type distribution and capability frequency."""
+    global total_messages
     cap_counts = collections.Counter()
     type_counts = collections.Counter()
     for msg in message_history:
@@ -234,7 +251,7 @@ async def get_message_stats():
         "data": {
             "by_capability": dict(cap_counts.most_common(10)),
             "by_type": dict(type_counts.most_common(10)),
-            "total": len(message_history),
+            "total": total_messages,
         }
     }
 
@@ -291,7 +308,7 @@ async def api_health():
         return {
             "mesh": "online" if peers > 0 else "degraded",
             "peers": peers,
-            "messages": len(message_history),
+            "messages": total_messages,
             "uptime_seconds": int(time.time() - _start_time) if _start_time else 0,
             "latency_p50_ms": round(p50, 1),
             "wal_entries": wal_count,
@@ -444,13 +461,14 @@ async def get_dht():
 
 @app.get("/api/messages")
 async def get_messages(limit: int = 50):
-    global message_history
+    global message_history, total_messages
     msgs = message_history[-limit:]
     return {
         "status": "ok",
         "data": {
             "count": len(msgs),
-            "total": len(message_history),
+            "total": total_messages,
+            "history_window": len(message_history),
             "messages": msgs,
         }
     }
@@ -458,12 +476,13 @@ async def get_messages(limit: int = 50):
 
 @app.get("/api/metrics")
 async def get_metrics():
+    global total_messages
     if not mesh:
         return {"error": "mesh not initialized"}
     try:
         wal_count = mesh.wal.count()
         topic_count = len(mesh._subscribed_topics)
-        msg_count = len(message_history)
+        msg_count = total_messages
         peers = await mesh.transport.peers()
         dht_count = len(mesh.dht._cache)
         sig_stats = mesh.sig_gate.stats()
@@ -609,6 +628,11 @@ async def get_pingpong():
 from pathlib import Path
 site_dir = Path("/home/agent/data/sites/p2p-dash")
 
+# Load persisted total_messages counter
+total_messages = _load_total()
+if total_messages > 0:
+    print(f"[dash] Restored total_messages={total_messages}")
+
 
 @app.get("/status", response_class=HTMLResponse)
 async def status_page():
@@ -627,4 +651,5 @@ app.mount("/js/", StaticFiles(directory=str(site_dir / "js")), name="js")
 
 if __name__ == "__main__":
     import uvicorn
+    print(f"[dash] total_messages={total_messages}")
     uvicorn.run(app, host="0.0.0.0", port=8090)
