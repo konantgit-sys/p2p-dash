@@ -85,7 +85,7 @@ async def startup():
         print(f"[dash] AgentMesh started: {mesh.did}")
 
         # Добавляем агентов в allowlist (DHT публикации без подписи)
-        mesh.sig_gate.set_allowlist(["dashboard", "cryter-agent", "forecaster-agent", "archivist-agent", "mesh-connector", "relay-mesh-bridge"])
+        mesh.sig_gate.set_allowlist(["dashboard", "cryter-agent", "forecaster-agent", "archivist-agent", "mesh-connector", "relay-mesh-bridge", mesh.did])
 
         # Включаем relay mode — форвард сообщений между пирами
         try:
