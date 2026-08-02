@@ -506,7 +506,8 @@ async function updateAll() {
       { data: pts.map(p => p.msg_count || 0), color: '#00c8ff' },
       { data: pts.map(p => p.peers || 0), color: '#22c55e' },
       { data: pts.map(p => (p.msg_rate || 0) * 10), color: '#f97316' },
-    ], ['msgs', 'peers', 'rate×10']);
+      { data: pts.map(p => (p.wal_count || 0) / 100), color: '#a855f7' },
+    ], ['msgs', 'peers', 'rate×10', 'wal/100']);
   }
 
   // ── Agent-to-Agent ping-pong ──

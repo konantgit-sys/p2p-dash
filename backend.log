@@ -196,3 +196,18 @@ INFO:     127.0.0.1:38718 - "POST /api/emit HTTP/1.1" 200 OK
 INFO:     127.0.0.1:33846 - "POST /api/emit HTTP/1.1" 200 OK
 [dash] AGENT MSG: did:snin:4c378fb type=event
 INFO:     127.0.0.1:54258 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:52702 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+[dash] Heartbeat sent (uptime: 90.3s)
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:59878 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:43068 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:33916 - "POST /api/emit HTTP/1.1" 200 OK
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:4c378fb type=event
+[dash] Heartbeat sent (uptime: 120.3s)
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:45858 - "POST /api/emit HTTP/1.1" 200 OK
