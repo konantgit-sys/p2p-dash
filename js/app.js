@@ -587,6 +587,19 @@ function renderMsgList(msgs) {
   if (!msgs.length) { list.innerHTML = `<div style="padding:32px;text-align:center;color:var(--muted);font-size:13px">${t('log.waiting')}</div>`; return; }
   const groups = groupMessages(msgs);
   list.innerHTML = groups.map(g => renderGroupedMsg(g)).join('');
+  // Also update mini recent-activity in Dashboard
+  renderRecentActivity(msgs.slice(0, 5));
+}
+
+function renderRecentActivity(msgs) {
+  const el = document.getElementById('recentActivity');
+  if (!el) return;
+  if (!msgs.length) { el.innerHTML = `<span style="color:var(--muted)">${t('log.waiting')}</span>`; return; }
+  el.innerHTML = msgs.map(m => {
+    const cap = (m.capability || m.payload?.capability || '?').replace('agent:', '');
+    const preview = (typeof m.payload === 'string' ? m.payload : JSON.stringify(m.payload)).slice(0, 60);
+    return `<div style="padding:2px 0;border-bottom:1px solid rgba(255,255,255,.03);cursor:pointer" onclick="document.querySelector('[data-tab=msgs]').click()">⬤ <b style="color:var(--accent)">${cap}</b> <span style="color:var(--text2);font-size:10px">${preview}</span></div>`;
+  }).join('');
 }
 
 // ═══════════════════════════════════════════

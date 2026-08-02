@@ -3,7 +3,7 @@
 
 const I18N = {
   en: {
-    'nav.dash':'Dashboard','nav.topo':'Topology','nav.about':'About',
+    'nav.dash':'Dashboard','nav.msgs':'Messages','nav.topo':'Topology','nav.about':'About',
     'hero.badge':'P2P Agent Mesh v0.5.1',
     'hero.online':'Mesh Online','hero.degraded':'Low Activity','hero.offline':'No Peers',
     'hero.peers':'Peers','hero.msgs':'Messages','hero.lat':'p50','hero.uptime':'Uptime',
@@ -18,6 +18,7 @@ const I18N = {
     'emit.title':'Emit Message','emit.btn':'Emit',
     'log.title':'Message Log','log.waiting':'Waiting for messages...',
     'actions.title':'Quick Actions',
+    'dash.recent':'Recent Activity',
     'topo.local':'This node (dashboard)','topo.peer':'Peer agents','topo.relay':'Relay/bridge',
     'topo.peers_title':'Peer Details','topo.discovery_title':'Discovery Log','topo.timeline_title':'Connection Timeline',
     'about.what_title':'What is P2P Agent Mesh?',
@@ -27,7 +28,7 @@ const I18N = {
     'about.links_title':'Links',
   },
   ru: {
-    'nav.dash':'Дашборд','nav.topo':'Топология','nav.about':'О проекте',
+    'nav.dash':'Дашборд','nav.msgs':'Сообщения','nav.topo':'Топология','nav.about':'О проекте',
     'hero.badge':'P2P Agent Mesh v0.5.1',
     'hero.online':'Сеть активна','hero.degraded':'Низкая активность','hero.offline':'Нет пиров',
     'hero.peers':'Пиры','hero.msgs':'Сообщения','hero.lat':'p50','hero.uptime':'Аптайм',
@@ -42,6 +43,7 @@ const I18N = {
     'emit.title':'Отправить сообщение','emit.btn':'Отправить',
     'log.title':'Лог сообщений','log.waiting':'Ожидание сообщений...',
     'actions.title':'Быстрые действия',
+    'dash.recent':'Последняя активность',
     'topo.local':'Этот узел (дашборд)','topo.peer':'Пиры-агенты','topo.relay':'Релей/мост',
     'topo.peers_title':'Детали пиров','topo.discovery_title':'Лог обнаружения','topo.timeline_title':'Хронология подключений',
     'about.what_title':'Что такое P2P Agent Mesh?',
