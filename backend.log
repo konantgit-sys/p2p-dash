@@ -211,3 +211,2228 @@ INFO:     127.0.0.1:33916 - "POST /api/emit HTTP/1.1" 200 OK
 [dash] Heartbeat sent (uptime: 120.3s)
 [dash] AGENT MSG: did:snin:4c378fb type=event
 INFO:     127.0.0.1:45858 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44788 - "GET /api/metrics/history HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:44804 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:33916 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+[dash] Heartbeat sent (uptime: 150.3s)
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:56990 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:47524 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:58464 - "POST /api/emit HTTP/1.1" 200 OK
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:4c378fb type=event
+[dash] Heartbeat sent (uptime: 180.3s)
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:48746 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44732 - "GET /api/metrics/history HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:44740 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:35570 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+[dash] Heartbeat sent (uptime: 210.3s)
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:37368 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:33888 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:45420 - "POST /api/emit HTTP/1.1" 200 OK
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:4c378fb type=event
+[dash] Heartbeat sent (uptime: 240.3s)
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:56860 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59802 - "GET /api/metrics/history HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:59806 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:35120 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+[dash] Heartbeat sent (uptime: 270.3s)
+INFO:     84.54.29.45:0 - "GET / HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:34674 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:37936 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58024 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58034 - "GET /api/metrics/history HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:58060 - "POST /api/emit HTTP/1.1" 200 OK
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:4c378fb type=event
+[dash] Heartbeat sent (uptime: 300.3s)
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:50414 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:41916 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:43960 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36312 - "GET /api/metrics HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+[dash] Heartbeat sent (uptime: 330.3s)
+INFO:     127.0.0.1:36326 - "GET /api/metrics HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:36328 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36344 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42108 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42112 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42128 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42132 - "GET /api/metrics/history HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:42140 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:40592 - "POST /api/emit HTTP/1.1" 200 OK
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:4c378fb type=event
+[dash] Heartbeat sent (uptime: 360.3s)
+INFO:     10.42.6.26:0 - "GET / HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /static/images/mesh-icon.png HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /css/style.css HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /js/i18n.js HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /js/app.js?v=2 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:47268 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:45720 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:35920 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35934 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35940 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+[dash] Heartbeat sent (uptime: 390.3s)
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:54416 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:37782 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:39076 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:4c378fb type=event
+[dash] Heartbeat sent (uptime: 420.4s)
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:33018 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:57378 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:40586 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+[dash] Heartbeat sent (uptime: 450.4s)
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:44316 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:51228 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:43396 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:4c378fb type=event
+[dash] Heartbeat sent (uptime: 480.4s)
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:35294 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:33594 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:52514 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+[dash] Heartbeat sent (uptime: 510.4s)
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:39726 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:60194 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:34850 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:4c378fb type=event
+[dash] Heartbeat sent (uptime: 540.4s)
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:53336 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:54302 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:59422 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+[dash] Heartbeat sent (uptime: 570.4s)
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:34190 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:42084 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     84.54.29.45:0 - "GET / HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:52402 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54628 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:4c378fb type=event
+[dash] Heartbeat sent (uptime: 600.4s)
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:54838 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:51138 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37410 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:37738 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52188 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52200 - "GET /api/wal?topic=_dht&limit=5 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+[dash] Heartbeat sent (uptime: 630.4s)
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:52516 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:36844 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:54032 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:4c378fb type=event
+[dash] Heartbeat sent (uptime: 660.4s)
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:44908 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45658 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:45924 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:59830 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+[dash] Heartbeat sent (uptime: 690.4s)
+[transport] Client identified: did:p2p:test (was tcp:127.0.0.1:47194)
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54516 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[transport] Client identified: did:p2p:observer-1 (was tcp:127.0.0.1:37232)
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:52582 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:4c378fb type=event
+[dash] Heartbeat sent (uptime: 720.4s)
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59864 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59874 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:59920 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:51988 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:48886 - "POST /api/emit HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+[dash] Heartbeat sent (uptime: 750.4s)
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:42392 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:60230 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:48482 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:4c378fb type=event
+[dash] Heartbeat sent (uptime: 780.4s)
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:44662 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:49058 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:39036 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+[dash] Heartbeat sent (uptime: 810.4s)
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:55752 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:55858 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:33844 - "POST /api/emit HTTP/1.1" 200 OK
+[agent] DHT rejected (unsigned, untrusted): sender=dashboard-agent
+[dash] AGENT MSG: did:snin:4c378fb type=event
+[dash] Heartbeat sent (uptime: 840.4s)
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:50468 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:46464 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:51488 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+[dash] Heartbeat sent (uptime: 870.4s)
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42966 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42982 - "GET /api/peers HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:42986 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     84.54.29.45:0 - "GET / HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     127.0.0.1:38614 - "POST /api/emit HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/peers HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/system HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages/stats HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/messages?limit=200 HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/metrics/history HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/dht HTTP/1.1" 200 OK
+[dash] AGENT MSG: did:snin:4c378fb type=event
+INFO:     10.42.6.26:0 - "GET /api/discovery HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/timeline HTTP/1.1" 200 OK
+INFO:     10.42.6.26:0 - "GET /api/latency/pingpong HTTP/1.1" 200 OK
+[start] another start.sh is running (flock busy) — exiting

@@ -115,6 +115,20 @@ async def startup():
                 message_history.append(msg)
                 if len(message_history) > MAX_HISTORY:
                     message_history[:] = message_history[-MAX_HISTORY:]
+
+                # Populate DHT with discovered agents
+                sender_did = msg.get("from", "")
+                agent_id = msg.get("agent_id", "")
+                if sender_did and agent_id and agent_id != "dashboard":
+                    dht_key = f"agent:{sender_did}"
+                    if dht_key not in mesh.dht._cache:
+                        mesh.dht._store(dht_key, {
+                            "agent_id": agent_id,
+                            "did": sender_did,
+                            "discovered_via": "bridge",
+                            "ts": time.time()
+                        }, 86400, "dashboard")
+
                 print(f"[dash] AGENT MSG: {msg.get('from','?')[:16]} type={msg.get('type','?')}")
             except Exception as e:
                 print(f"[dash] on_agent_msg error: {e}")
