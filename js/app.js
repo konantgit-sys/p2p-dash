@@ -501,7 +501,17 @@ async function updateAll() {
   }
 
   if (hist.status === 'ok' && hist.data.points.length >= 2) {
-    const pts = hist.data.points;
+    let pts = hist.data.points;
+    // Filter by chart window
+    const now = Date.now() / 1000;
+    const windows = { '3m': 3 * 60, '15m': 15 * 60, '1h': 3600, '6h': 6 * 3600 };
+    const cutoff = now - (windows[chartWindow] || 180);
+    pts = pts.filter(p => p.ts > cutoff);
+    if (pts.length < 2) pts = hist.data.points.slice(-2); // fallback
+    // Update legend with time range
+    const fromTime = new Date(pts[0].ts * 1000).toLocaleTimeString();
+    const toTime = new Date(pts[pts.length-1].ts * 1000).toLocaleTimeString();
+    document.getElementById('trendChartLegend').innerHTML = `${fromTime} — ${toTime} · ${pts.length} pts`;
     drawMultiLineChart('trendChart', [
       { data: pts.map(p => p.msg_count || 0), color: '#00c8ff' },
       { data: pts.map(p => p.peers || 0), color: '#22c55e' },
@@ -555,6 +565,17 @@ async function updateAll() {
     if (dot) dot.className = 'status-dot online';
     if (heroDot) heroDot.className = 'status-dot online';
   }
+}
+
+// ═══════════════════════════════════════════
+// ═══ CHART WINDOW SELECTOR
+// ═══════════════════════════════════════════
+let chartWindow = '3m'; // default: 3 minutes
+function setChartWindow(win) {
+  chartWindow = win;
+  document.querySelectorAll('.chart-win-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector(`.chart-win-btn[data-win="${win}"]`).classList.add('active');
+  poll(); // re-render with new window
 }
 
 // ═══════════════════════════════════════════

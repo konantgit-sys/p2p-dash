@@ -167,7 +167,13 @@
     <!-- ROW 2: Charts -->
     <div class="grid grid-3">
       <div class="card">
-        <div class="card-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg><span>Mesh History</span></div>
+        <div class="card-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg><span>Mesh History</span>
+        <span style="margin-left:auto;display:flex;gap:4px">
+          <button class="chart-win-btn active" data-win="3m" onclick="setChartWindow('3m')">3m</button>
+          <button class="chart-win-btn" data-win="15m" onclick="setChartWindow('15m')">15m</button>
+          <button class="chart-win-btn" data-win="1h" onclick="setChartWindow('1h')">1h</button>
+          <button class="chart-win-btn" data-win="6h" onclick="setChartWindow('6h')">6h</button>
+        </span></div>
         <div id="trendChartLegend" style="font-size:10px;text-align:center;margin-bottom:4px"></div>
         <canvas class="chart-canvas" id="trendChart" style="height:180px"></canvas>
       </div>

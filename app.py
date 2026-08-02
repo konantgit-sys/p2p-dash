@@ -228,8 +228,8 @@ _start_time = time.time()
 # Discovery log — track DHT lookup attempts
 _discovery_log: collections.deque = collections.deque(maxlen=50)
 
-# Time-series history for sparklines/charts (last 60 points ~ 3 min at 3s polling)
-_metrics_history: collections.deque = collections.deque(maxlen=60)
+# Time-series history for sparklines/charts (last 300 points ~ 15 min at 3s polling)
+_metrics_history: collections.deque = collections.deque(maxlen=300)
 _msg_rate_samples: collections.deque = collections.deque(maxlen=60)
 
 
