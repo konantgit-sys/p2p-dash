@@ -1,5 +1,5 @@
 """P2P Mesh Dashboard Backend — FastAPI + AgentMesh.
-v0.5.1 — Shows real mesh-node state: subscriptions, WAL, DHT, peers, latency.
+v0.6.0 — NAT traversal (0.0.0.0 bind), peer registration, remote mesh_peer support
 API endpoints for frontend.
 """
 
@@ -132,6 +132,17 @@ async def startup():
             print(f"[dash] P2P port saved: {p2p_port}")
         except Exception as e:
             print(f"[dash] Failed to save P2P port: {e}")
+
+        # ── Raft consensus v0.6.1 ──
+        raft_node = None
+        try:
+            from phase0.raft import RaftNode
+            raft_node = RaftNode("dashboard", transport=mesh.transport, wal=mesh.wal)
+            await raft_node.start(peers=["dashboard"])
+            mesh._raft = raft_node
+            print(f"[dash] Raft started: {raft_node.status()}")
+        except Exception as e:
+            print(f"[dash] Raft init skipped: {e}")
 
         # Subscribe directly to agent topics BEFORE mesh.listen
         # (mesh.listen подписывает транспорт на agent:echo — наш бы пропустился)
@@ -338,7 +349,7 @@ async def health():
 
 @app.get("/api")
 async def api_root():
-    return {"status": "ok", "service": "p2p-mesh-dashboard", "version": "0.5.1", "endpoints": ["/api/status", "/api/peers", "/api/topics", "/api/wal", "/api/timeline", "/api/dht", "/api/messages", "/api/messages/stats", "/api/metrics", "/api/metrics/history", "/api/discovery", "/api/system", "/api/emit", "/api/mesh/graph", "/"]}
+    return {"status": "ok", "service": "p2p-mesh-dashboard", "version": "0.6.0", "endpoints": ["/api/status", "/api/peers", "/api/topics", "/api/wal", "/api/timeline", "/api/dht", "/api/messages", "/api/messages/stats", "/api/metrics", "/api/metrics/history", "/api/discovery", "/api/system", "/api/emit", "/api/register_peer", "/api/known_peers", "/api/mesh/graph", "/"]}
 
 
 @app.get("/api/health")
@@ -364,7 +375,9 @@ async def api_health():
             "latency_p50_ms": round(p50, 1),
             "wal_entries": wal_count,
             "topics": len(s.get('topics', [])),
-            "version": "0.5.1",
+            "version": "0.6.0",
+            "raft_role": mesh._raft.status()["state"] if hasattr(mesh, '_raft') and mesh._raft else "none",
+            "consensus": "raft_active" if hasattr(mesh, '_raft') and mesh._raft and mesh._raft.state == "leader" else "raft_standby",
         }
     except Exception as e:
         return {"mesh": "error", "error": str(e)}
@@ -505,7 +518,9 @@ async def get_dht():
                 "ts": round(val.get("ts", 0), 1),
                 "ttl": val.get("ttl", 0),
             })
-        return {"status": "ok", "data": {"count": len(entries), "entries": entries}}
+        # v0.6.2: добавить статистику Kademlia бакетов
+        bucket_stats = mesh.dht.bucket_stats() if hasattr(mesh.dht, 'bucket_stats') else {}
+        return {"status": "ok", "data": {"count": len(entries), "entries": entries, "buckets": bucket_stats}}
     except Exception as e:
         return {"status": "error", "error": str(e)}
 
@@ -594,11 +609,64 @@ async def emit_message(req: EmitRequest):
         raise HTTPException(status_code=503, detail="mesh not initialized")
     try:
         msg_id = await mesh.emit(req.capability, req.payload)
-        # Message will be added to message_history by the transport callback
-        # (on_agent_msg handles agent:* topics including agent:cryter, agent:v2bot)
         return {"status": "ok", "msg_id": msg_id}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+# ── Peer Registration (NAT Traversal v0.6.0) ─────────────
+
+_registered_peers: dict[str, dict] = {}  # peer_id → {addr, port, ts, name}
+
+
+@app.post("/api/register_peer")
+async def register_peer(req: Request):
+    """Register an external peer. mesh_peer calls this on startup."""
+    try:
+        body = await req.json()
+    except Exception:
+        raise HTTPException(status_code=400, detail="invalid JSON")
+
+    peer_id = body.get("peer_id", "")
+    addr = body.get("addr", "")
+    port = body.get("port", 39001)
+    name = body.get("name", peer_id)
+
+    if not peer_id:
+        raise HTTPException(status_code=400, detail="missing peer_id")
+
+    _registered_peers[peer_id] = {
+        "addr": addr,
+        "port": port,
+        "name": name,
+        "ts": time.time(),
+        "last_seen": time.time(),
+    }
+
+    # Also try TCP connection if mesh is running
+    if mesh and addr:
+        try:
+            await mesh.transport.connect_peer(peer_id, addr, int(port))
+        except Exception as e:
+            print(f"[api] register_peer: connect failed to {peer_id}@{addr}:{port} — {e}")
+
+    return {"status": "ok", "peer_id": peer_id, "count": len(_registered_peers)}
+
+
+@app.get("/api/known_peers")
+async def known_peers():
+    """List all registered (known) peers, including unconnected ones."""
+    return {
+        "status": "ok",
+        "data": {
+            "count": len(_registered_peers),
+            "peers": [
+                {"peer_id": pid, "addr": p["addr"], "port": p["port"],
+                 "name": p["name"], "ts": p["ts"]}
+                for pid, p in _registered_peers.items()
+            ]
+        }
+    }
 
 
 # ── Agent-to-Agent ping-pong ──────────────────────────

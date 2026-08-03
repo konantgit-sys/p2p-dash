@@ -6,17 +6,18 @@ Mesh Peer — регистрируется как TCP-пир + шлёт heartbea
 Usage: python3 mesh_peer.py
 """
 
-import asyncio, json, time, sys
+import asyncio, json, time, sys, os
 import urllib.request
 
 # Unbuffered output — logs appear in file immediately
 sys.stdout.reconfigure(line_buffering=True) if hasattr(sys.stdout, 'reconfigure') else None
 
-PEER_NAME = "observer-1"
+PEER_NAME = os.environ.get("PEER_NAME", "observer-1")
 PEER_ID = f"did:p2p:{PEER_NAME}"
-MESH_HOST = "127.0.0.1"
-MESH_PORT = 39001
-DASHBOARD_API = "http://127.0.0.1:8090/api/emit"
+MESH_HOST = os.environ.get("MESH_HOST", "127.0.0.1")
+MESH_PORT = int(os.environ.get("MESH_PORT", "39001"))
+DASHBOARD_API = os.environ.get("DASHBOARD_API", "http://127.0.0.1:8090")
+DASHBOARD_HOST = os.environ.get("DASHBOARD_HOST", "127.0.0.1")
 INTERVAL = 10  # seconds between heartbeats
 
 
@@ -28,11 +29,31 @@ def emit_via_api():
         "payload": {"seq": seq, "ts": time.time(), "msg": f"Heartbeat {seq} from {PEER_NAME}"}
     }).encode()
     try:
-        req = urllib.request.Request(DASHBOARD_API, data=payload,
+        req = urllib.request.Request(f"{DASHBOARD_API}/api/emit", data=payload,
             headers={"Content-Type": "application/json"})
         urllib.request.urlopen(req, timeout=3)
         return True
     except Exception:
+        return False
+
+
+def register_peer():
+    """Register this peer with the dashboard API (NAT Traversal v0.6.0)."""
+    try:
+        payload = json.dumps({
+            "peer_id": PEER_ID,
+            "name": PEER_NAME,
+            "addr": MESH_HOST,
+            "port": MESH_PORT,
+        }).encode()
+        req = urllib.request.Request(f"{DASHBOARD_API}/api/register_peer", data=payload,
+            headers={"Content-Type": "application/json"})
+        resp = urllib.request.urlopen(req, timeout=3)
+        data = json.loads(resp.read())
+        print(f"[{PEER_NAME}] Registered with dashboard: {data.get('status','?')}")
+        return True
+    except Exception as e:
+        print(f"[{PEER_NAME}] ⚠️ Registration failed: {e}")
         return False
 
 
@@ -65,7 +86,7 @@ async def read_loop(reader):
 
 
 async def main():
-    print(f"[{PEER_NAME}] Starting...")
+    print(f"[{PEER_NAME}] Starting... (host={MESH_HOST}, port={MESH_PORT}, api={DASHBOARD_API})")
 
     reconnect_delay = 2
     while True:
@@ -73,6 +94,9 @@ async def main():
             reader, writer = await tcp_connect()
             reconnect_delay = 2
             print(f"[{PEER_NAME}] ✅ TCP connected, registered as peer")
+
+            # Register via HTTP API (NAT Traversal v0.6.0)
+            register_peer()
 
             # Background reader — track task to detect disconnects
             reader_task = asyncio.create_task(read_loop(reader))
