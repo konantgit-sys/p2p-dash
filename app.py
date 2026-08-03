@@ -387,7 +387,7 @@ async def api_health():
             "consensus": "raft_active" if hasattr(mesh, '_raft') and mesh._raft and mesh._raft.state == "leader" else "raft_standby",
             # ── DHT v0.6.1 ──
             "dht": {
-                "buckets": list(mesh.dht.bucket_stats()["per_bucket"].values()) if hasattr(mesh, 'dht') else [],
+                "buckets": mesh.dht.bucket_stats()["per_bucket"] if hasattr(mesh, 'dht') else [],
                 "total": mesh.dht.bucket_stats()["total_entries"] if hasattr(mesh, 'dht') else 0,
             },
             # ── Peers ──
