@@ -39,6 +39,10 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="14" r="2"/><line x1="12" y1="6" x2="6" y2="18"/><line x1="12" y1="6" x2="18" y2="14"/></svg>
       <span data-i18n="nav.topo">Topology</span>
     </button>
+    <button data-tab="consensus">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <span>Consensus</span>
+    </button>
     <button data-tab="about">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
       <span data-i18n="nav.about">About</span>
@@ -274,6 +278,66 @@
     </div>
   </section>
 
+  <!-- ═══ CONSENSUS ═══ -->
+  <section id="sec-consensus">
+    <div class="hero" style="margin-top:0;height:auto;min-height:160px">
+      <div class="hero-glow" style="background:radial-gradient(circle at 50% 0%,rgba(250,176,5,.18) 0%,transparent 70%)"></div>
+      <div class="hero-overlay" style="opacity:.3"></div>
+      <div class="hero-content" style="padding:24px 32px">
+        <div class="hero-badge">
+          <span id="raftStatusDot" class="status-dot" style="background:var(--yellow)"></span>
+          <span id="raftStatusLabel">Raft Consensus — <b>Leader</b></span>
+        </div>
+        <div class="hero-metrics">
+          <div class="hero-metric"><span class="hero-metric-value" style="color:var(--yellow)" id="raftTerm">-</span><span class="hero-metric-label">Term</span></div>
+          <div class="hero-metric"><span class="hero-metric-value accent" id="raftPeers">-</span><span class="hero-metric-label">Raft Peers</span></div>
+          <div class="hero-metric"><span class="hero-metric-value green" id="raftCommit">-</span><span class="hero-metric-label">Commit Index</span></div>
+          <div class="hero-metric"><span class="hero-metric-value purple" id="raftUptime">-</span><span class="hero-metric-label">Consensus Uptime</span></div>
+        </div>
+        <p class="hero-tagline">Raft-based distributed consensus with leader election & heartbeat</p>
+      </div>
+    </div>
+
+    <div class="container" style="margin-top:0">
+      <!-- Raft State + Heartbeat -->
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="card-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="6" x2="12" y2="12"/><line x1="12" y1="12" x2="16" y2="14"/></svg><span>Raft State</span></div>
+          <div style="font-size:11px;line-height:2.2;color:var(--muted)">
+            <div class="metric-row"><span class="label">Node ID</span><span class="value" id="raftNodeId" style="color:var(--text2)">-</span></div>
+            <div class="metric-row"><span class="label">State</span><span class="value" id="raftState" style="font-weight:700">-</span></div>
+            <div class="metric-row"><span class="label">Leader</span><span class="value" id="raftLeader" style="color:var(--green)">-</span></div>
+            <div class="metric-row"><span class="label">Current Term</span><span class="value" id="raftCTerm" style="color:var(--yellow)">-</span></div>
+            <div class="metric-row"><span class="label">Voted For</span><span class="value" id="raftVotedFor">-</span></div>
+            <div class="metric-row"><span class="label">Last Heartbeat</span><span class="value" id="raftLastHb">-</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg><span>Heartbeat Monitor</span></div>
+          <canvas id="hbCanvas" style="width:100%;height:120px;margin-top:8px;border-radius:8px;background:rgba(0,0,0,.15)"></canvas>
+          <div id="hbStats" style="font-size:10px;color:var(--muted);text-align:center;margin-top:4px"></div>
+        </div>
+        <div class="card">
+          <div class="card-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg><span>Election History</span></div>
+          <div id="electionLog" style="font-size:10px;max-height:140px;overflow-y:auto;line-height:1.8;color:var(--muted)"></div>
+        </div>
+      </div>
+
+      <!-- DHT Kademlia Buckets -->
+      <div class="card" style="margin-top:14px">
+        <div class="card-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><path d="M8 11h6"/><path d="M11 8v6"/></svg><span>DHT Kademlia — 8 Buckets</span></div>
+        <div id="dhtBuckets" style="display:flex;gap:6px;margin-top:12px;flex-wrap:wrap"></div>
+        <div id="dhtBucketStats" style="font-size:11px;color:var(--muted);margin-top:8px;text-align:center"></div>
+      </div>
+
+      <!-- Peer table -->
+      <div class="card" style="margin-top:14px">
+        <div class="card-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg><span>Raft Peer List</span></div>
+        <div id="raftPeerTable" style="font-size:11px;line-height:2;color:var(--muted)">Loading...</div>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══ ABOUT ═══ -->
   <section id="sec-about">
     <div class="about-grid">
@@ -316,6 +380,178 @@
 <!-- ═══ SCRIPTS — Modular ═══ -->
 <script src="js/i18n.js"></script>
 <script src="js/app.js?v=2"></script>
+
+<!-- ═══ CONSENSUS TAB JS ═══ -->
+<script>
+// --- Tab switching integration ---
+(function(){
+  const origSwitch = window.switchTab;
+  window.switchTab = function(tab){
+    if(origSwitch) origSwitch(tab);
+    if(tab === 'consensus') { initConsensus(); }
+    else if(tab === 'consensus' && window._consensusInterval) { clearInterval(window._consensusInterval); }
+  };
+  // Hook into existing tab clicks
+  document.addEventListener('click', function(e){
+    const btn = e.target.closest('[data-tab]');
+    if(btn && btn.dataset.tab === 'consensus') initConsensus();
+  });
+})();
+
+const HB_HISTORY = [];
+const MAX_HB = 60;
+
+async function initConsensus(){
+  fetchConsensus();
+  if(window._consensusInterval) clearInterval(window._consensusInterval);
+  window._consensusInterval = setInterval(fetchConsensus, 2000);
+}
+
+async function fetchConsensus(){
+  try {
+    const r = await fetch('/api/health');
+    const d = await r.json();
+
+    // Raft
+    const role = d.raft_role || 'unknown';
+    const elState = document.getElementById('raftState');
+    const elDot = document.getElementById('raftStatusDot');
+    const elLabel = document.getElementById('raftStatusLabel');
+
+    if(elState) elState.textContent = role;
+    if(elState){
+      if(role==='leader'){ elState.style.color='var(--green)'; elDot.style.background='var(--green)'; elLabel.innerHTML='Raft Consensus — <b style=color:var(--green)>Leader</b>'; }
+      else if(role==='follower'){ elState.style.color='var(--blue)'; elDot.style.background='var(--blue)'; elLabel.innerHTML='Raft Consensus — <b style=color:var(--blue)>Follower</b>'; }
+      else { elState.style.color='var(--yellow)'; elDot.style.background='var(--yellow)'; elLabel.innerHTML='Raft Consensus — <b style=color:var(--yellow)>Candidate</b>'; }
+    }
+
+    document.getElementById('raftTerm').textContent = d.raft_term || '-';
+    document.getElementById('raftPeers').textContent = d.raft_peers || '1';
+    document.getElementById('raftCommit').textContent = d.raft_commit || '0';
+    document.getElementById('raftNodeId').textContent = d.raft_node_id || 'dashboard';
+    document.getElementById('raftLeader').textContent = d.raft_leader || (role==='leader'?'self':'-');
+    document.getElementById('raftCTerm').textContent = d.raft_term || '0';
+    document.getElementById('raftVotedFor').textContent = d.raft_voted_for || '-';
+
+    // Uptime + heartbeat
+    const uptime = d.uptime_seconds || 0;
+    document.getElementById('raftUptime').textContent = fmtUptime(uptime);
+    document.getElementById('raftLastHb').textContent = (d.raft_term>0 ? 'active' : 'waiting');
+
+    // Heartbeat monitor
+    HB_HISTORY.push({t: Date.now(), v: d.raft_term || 0, role: role});
+    if(HB_HISTORY.length > MAX_HB) HB_HISTORY.shift();
+    drawHeartbeat();
+
+    // Election log
+    if(role==='leader' && (!window._lastRaftRole || window._lastRaftRole!=='leader')){
+      addElectionLog('👑 Elected LEADER', 'term '+(d.raft_term||0));
+    }
+    window._lastRaftRole = role;
+
+    // DHT
+    const dht = d.dht || {};
+    const buckets = dht.buckets || [0,0,0,0,0,0,0,0];
+    const total = dht.total || 0;
+    drawBuckets(buckets, total);
+
+    // Peers
+    const peers = d.peers_list || [];
+    const peerDiv = document.getElementById('raftPeerTable');
+    if(peerDiv && peers.length){
+      peerDiv.innerHTML = peers.map(p =>
+        `<div class=metric-row><span class=label>${p.id||p}</span><span class=value style=color:var(--green)>${p.status||'active'}</span></div>`
+      ).join('');
+    }
+
+  } catch(e){
+    console.warn('consensus fetch:', e.message);
+  }
+}
+
+function fmtUptime(s){
+  const h=Math.floor(s/3600), m=Math.floor((s%3600)/60);
+  return h>0 ? h+'h '+m+'m' : m+'m '+(s%60)+'s';
+}
+
+function addElectionLog(msg, detail){
+  const log = document.getElementById('electionLog');
+  if(!log) return;
+  const now = new Date().toLocaleTimeString();
+  log.innerHTML = `<div style=color:var(--yellow)>${now} ${msg} <span style=color:var(--muted)>${detail}</span></div>` + log.innerHTML;
+  if(log.children.length > 20) log.lastChild.remove();
+}
+
+function drawBuckets(buckets, total){
+  const container = document.getElementById('dhtBuckets');
+  const stats = document.getElementById('dhtBucketStats');
+  if(!container) return;
+
+  const max = Math.max(...buckets, 1);
+  container.innerHTML = buckets.map((v,i) => {
+    const h = Math.max((v/max)*100, 4);
+    const color = v>0 ? 'var(--accent)' : 'rgba(255,255,255,.08)';
+    return `<div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px">
+      <span style="font-size:10px;color:var(--muted)">${v}</span>
+      <div style="width:100%;height:${h}px;background:${color};border-radius:4px 4px 0 0;min-height:4px" title="Bucket ${i}: ${v} agents"></div>
+      <span style="font-size:9px;color:var(--muted)">B${i}</span>
+    </div>`;
+  }).join('');
+  if(stats) stats.textContent = `Total: ${total} agents across ${buckets.filter(b=>b>0).length}/8 active buckets`;
+}
+
+function drawHeartbeat(){
+  const canvas = document.getElementById('hbCanvas');
+  if(!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const W=canvas.width=canvas.offsetWidth*2, H=canvas.height=120*2;
+  ctx.clearRect(0,0,W,H);
+
+  if(HB_HISTORY.length<2){ ctx.fillStyle='var(--muted)'; ctx.font='24px sans-serif'; ctx.textAlign='center'; ctx.fillText('collecting...',W/2,H/2); return; }
+
+  const now=Date.now(), start=HB_HISTORY[0].t, span=Math.max(now-start, 60000);
+  const padX=40, padY=20, gw=W-padX*2, gh=H-padY*2;
+  let maxTerm=1;
+  HB_HISTORY.forEach(h=>{ if(h.v>maxTerm) maxTerm=h.v; });
+
+  // Grid
+  ctx.strokeStyle='rgba(255,255,255,.04)'; ctx.lineWidth=1;
+  for(let i=0;i<=4;i++){ const y=padY+gh*(i/4); ctx.beginPath(); ctx.moveTo(padX,y); ctx.lineTo(W-padX,y); ctx.stroke(); }
+
+  // Line
+  ctx.strokeStyle='var(--accent)'; ctx.lineWidth=3; ctx.shadowColor='var(--accent-glow, rgba(0,212,255,.4))'; ctx.shadowBlur=8;
+  ctx.beginPath();
+  HB_HISTORY.forEach((h,i)=>{
+    const x=padX+gw*((h.t-start)/span);
+    const y=padY+gh*(1-(h.v/maxTerm));
+    if(i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+  });
+  ctx.stroke();
+  ctx.shadowBlur=0;
+
+  // Role markers
+  HB_HISTORY.forEach(h=>{
+    if(h.role==='leader'){
+      const x=padX+gw*((h.t-start)/span);
+      const y=padY+gh*(1-(h.v/maxTerm));
+      ctx.fillStyle='var(--green)'; ctx.beginPath(); ctx.arc(x,y,4,0,Math.PI*2); ctx.fill();
+    }
+  });
+
+  // Stats
+  const hbStats=document.getElementById('hbStats');
+  if(hbStats){
+    const leaders = HB_HISTORY.filter(h=>h.role==='leader').length;
+    hbStats.textContent = `${HB_HISTORY.length} samples | ${leaders} leader beats | max term ${maxTerm}`;
+  }
+}
+
+// Initial trigger if consensus tab is somehow active
+setTimeout(()=>{
+  const activeTab = document.querySelector('[data-tab].active');
+  if(activeTab && activeTab.dataset.tab==='consensus') initConsensus();
+}, 500);
+</script>
 
 </body>
 </html>

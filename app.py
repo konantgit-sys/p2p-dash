@@ -376,8 +376,22 @@ async def api_health():
             "wal_entries": wal_count,
             "topics": len(s.get('topics', [])),
             "version": "0.6.1",
+            # ── Raft v0.6.1 ──
             "raft_role": mesh._raft.status()["state"] if hasattr(mesh, '_raft') and mesh._raft else "none",
+            "raft_term": mesh._raft.current_term if hasattr(mesh, '_raft') and mesh._raft else 0,
+            "raft_node_id": mesh._raft.node_id if hasattr(mesh, '_raft') and mesh._raft else "unknown",
+            "raft_leader": mesh._raft.leader_id if hasattr(mesh, '_raft') and mesh._raft else None,
+            "raft_peers": len(mesh._raft._peers) if hasattr(mesh, '_raft') and mesh._raft else 0,
+            "raft_commit": mesh._raft.commit_index if hasattr(mesh, '_raft') and mesh._raft else 0,
+            "raft_voted_for": mesh._raft.voted_for if hasattr(mesh, '_raft') and mesh._raft else None,
             "consensus": "raft_active" if hasattr(mesh, '_raft') and mesh._raft and mesh._raft.state == "leader" else "raft_standby",
+            # ── DHT v0.6.1 ──
+            "dht": {
+                "buckets": list(mesh.dht.bucket_stats()["per_bucket"].values()) if hasattr(mesh, 'dht') else [],
+                "total": mesh.dht.bucket_stats()["total_entries"] if hasattr(mesh, 'dht') else 0,
+            },
+            # ── Peers ──
+            "peers_list": [{"id": pid, "status": "active"} for pid in mesh.transport._tcp_connections.keys()] if hasattr(mesh.transport, '_tcp_connections') else [],
         }
     except Exception as e:
         return {"mesh": "error", "error": str(e)}
