@@ -181,7 +181,7 @@ nav .status-dot.offline{background:var(--red);box-shadow:0 0 8px var(--red),0 0 
 
 /* ══ CONTAINER ══ */
 .container{max-width:1340px;margin:0 auto;padding:24px;position:relative;z-index:2}
-section{display:none;animation:tabFade .35s ease-out}
+section{display:none;animation:tabFade .35s ease-out;max-width:100%}
 section.active{display:block}
 @keyframes tabFade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 
@@ -366,7 +366,102 @@ section.active{display:block}
 .link-btn:hover{border-color:rgba(0,200,255,.2);background:rgba(0,200,255,.03);color:var(--text);box-shadow:0 0 20px rgba(0,200,255,.04)}
 
 /* ══ RESPONSIVE ══ */
-@media(max-width:768px){
+/* ============ MOBILE FIRST FIXES ============ */
+/* Overflow protection — always on */
+.card { word-wrap: break-word; overflow-wrap: break-word; }
+pre, code, .msg-payload, .msg-from, .msg-signature { word-break: break-all; overflow-wrap: anywhere; }
+.messages-table { table-layout: fixed; width: 100%; }
+.messages-table td { word-break: break-all; }
+
+@media (max-width: 768px) {
+  .messages-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .card { max-width: 100vw; }
+  canvas { max-width: 100%; }
+}
+
+@media(max-width:480px){
+  .grid,.grid-3{grid-template-columns:1fr}
+  /* Nav — icons only, scrollable */
+  nav{padding:0 8px;height:48px;gap:4px}
+  nav .logo{font-size:13px;gap:4px}
+  nav .logo img{width:22px;height:22px}
+  nav .logo-version{display:none}
+  nav .tabs{overflow-x:auto;-webkit-overflow-scrolling:touch;gap:2px;mask-image:linear-gradient(to right,transparent 0,#000 8px,#000 calc(100%-24px),transparent 100%);-webkit-mask-image:linear-gradient(to right,transparent 0,#000 8px,#000 calc(100%-24px),transparent 100%)}
+  nav .tabs button{padding:6px 10px;font-size:10px;white-space:nowrap;flex-shrink:0;gap:4px}
+  nav .tabs button svg{width:14px;height:14px}
+  nav .tabs button span{display:none}          /* icons only */
+  nav .tabs button[data-tab="dash"] span,
+  nav .tabs button.active span{display:inline} /* show active tab label */
+  nav .right{gap:4px;flex-shrink:0}
+  nav .lang-btn{padding:4px 6px;font-size:10px}
+
+  /* Hero */
+  .hero{height:auto;min-height:120px;padding:16px 0}
+  .hero-content h1{font-size:18px}
+  .hero-metrics{flex-wrap:wrap;gap:12px;justify-content:center}
+  .hero-metric-value{font-size:22px}
+  .hero-metric-label{font-size:9px}
+  .hero-tagline{display:none}
+  .hero-badge{font-size:10px;padding:4px 10px}
+  .about-grid{grid-template-columns:1fr}
+
+  /* Container */
+  .container{padding:12px}
+
+  /* Cards */
+  .card{padding:12px;max-width:100%;box-sizing:border-box}
+  .metric{font-size:24px}
+  .card-title{font-size:12px}
+
+  /* Summary bar */
+  .summary-bar{flex-direction:column;align-items:flex-start;gap:8px}
+  .summary-delta{width:100%;justify-content:flex-start}
+
+  /* Emit panel */
+  .emit-panel form{flex-direction:column}
+  .emit-panel input[type="text"],
+  .emit-panel select{min-width:100% !important;width:100% !important;max-width:100%;box-sizing:border-box}
+  .emit-panel button{width:100%}
+
+  /* Messages */
+  .msg-from{min-width:50px;font-size:9px}
+  .msg-cap{min-width:40px;font-size:9px}
+  .msg-signature{display:none}
+
+  /* Topology */
+  #topoCanvas{height:250px}
+  .topo-legend{flex-wrap:wrap;gap:8px;font-size:11px}
+
+  /* Gauges */
+  .latency-gauges{gap:8px}
+  .gauge{width:38px;height:38px}
+
+  /* Charts */
+  .chart-canvas{height:100px}
+  .chart-win-btn{font-size:9px;padding:3px 6px}
+
+  /* Consensus tab */
+  #sec-consensus .hero{min-height:auto}
+  #sec-consensus .hero-content{padding:16px !important}
+  #sec-consensus .hero-metrics{gap:10px}
+  #sec-consensus .hero-metric-value{font-size:20px}
+  #dhtBuckets{gap:3px}
+  #dhtBuckets>div>span{font-size:8px}
+
+  /* Message modal */
+  #msgModal>div{padding:12px;max-width:95vw}
+
+  /* Notification dock */
+  #notifyDock{width:280px}
+
+  /* Global overflow fix */
+  html,body{overflow-x:hidden;max-width:100vw}
+  canvas{max-width:100%}
+  pre,code{max-width:100%;word-break:break-all}
+  table{max-width:100%;display:block;overflow-x:auto}
+}
+/* ============ 768px TABLET ============ */
+@media(max-width:768px) and (min-width:481px){
   nav{padding:0 12px;height:52px}
   nav .tabs button{padding:6px 10px;font-size:11px}
   nav .tabs button svg{width:13px;height:13px}
@@ -391,27 +486,5 @@ section.active{display:block}
   .latency-gauges{gap:10px}
   .gauge{width:42px;height:42px}
   .chart-canvas{height:120px}
-}
-@media(max-width:480px){
-  .grid,.grid-3{grid-template-columns:1fr}
-  nav .tabs button{padding:3px 5px;font-size:10px}
-  nav .lang-btn{padding:4px 6px;font-size:10px}
-  .hero-content h1{font-size:18px}
-  .about-grid{grid-template-columns:1fr}
-  .hero{height:140px}
-  .hero-metrics{gap:14px}
-  .hero-metric-value{font-size:22px}
-  .summary-bar{flex-direction:column;align-items:flex-start;gap:8px}
-  .summary-delta{width:100%;justify-content:flex-start}
-}
-
-/* === OVERFLOW FIXES (2026-07-31) === */
-.card { word-wrap: break-word; overflow-wrap: break-word; }
-pre, code, .msg-payload, .msg-from, .msg-signature { word-break: break-all; overflow-wrap: anywhere; }
-.messages-table { table-layout: fixed; width: 100%; }
-.messages-table td { word-break: break-all; }
-@media (max-width: 768px) {
-  .messages-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  .card { max-width: 100vw; }
-  canvas { max-width: 100%; }
+  .container{padding:16px}
 }
