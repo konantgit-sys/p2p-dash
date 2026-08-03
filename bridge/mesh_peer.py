@@ -6,8 +6,11 @@ Mesh Peer — регистрируется как TCP-пир + шлёт heartbea
 Usage: python3 mesh_peer.py
 """
 
-import asyncio, json, time
+import asyncio, json, time, sys
 import urllib.request
+
+# Unbuffered output — logs appear in file immediately
+sys.stdout.reconfigure(line_buffering=True) if hasattr(sys.stdout, 'reconfigure') else None
 
 PEER_NAME = "observer-1"
 PEER_ID = f"did:p2p:{PEER_NAME}"
@@ -69,24 +72,35 @@ async def main():
         try:
             reader, writer = await tcp_connect()
             reconnect_delay = 2
-            print(f"[{PEER_NAME}] Peer registered")
+            print(f"[{PEER_NAME}] ✅ TCP connected, registered as peer")
 
-            # Background reader
-            asyncio.create_task(read_loop(reader))
+            # Background reader — track task to detect disconnects
+            reader_task = asyncio.create_task(read_loop(reader))
 
             # Heartbeat loop
             seq = 0
             while True:
                 await asyncio.sleep(INTERVAL)
                 seq += 1
+
+                # TCP dead-check: if reader died, connection is broken
+                if reader_task.done():
+                    exc = reader_task.exception()
+                    raise ConnectionResetError(f"reader died: {exc}" if exc else "reader closed")
+
+                # Active liveness check: try writing a ping
+                try:
+                    ping = json.dumps({"type": "ping", "node_id": PEER_NAME, "ts": time.time()}) + "\n"
+                    writer.write(ping.encode())
+                    await asyncio.wait_for(writer.drain(), timeout=5)
+                except Exception:
+                    raise ConnectionResetError("ping failed — connection dead")
+
                 ok = emit_via_api()
                 if seq <= 3 or seq % 30 == 0:
                     print(f"[{PEER_NAME}] → heartbeat #{seq} {'✓' if ok else '✗'}")
-                # Check if still connected
-                if writer.is_closing():
-                    raise ConnectionResetError("writer closed")
 
-        except (ConnectionResetError, BrokenPipeError, OSError) as e:
+        except (ConnectionResetError, BrokenPipeError, OSError, asyncio.TimeoutError) as e:
             print(f"[{PEER_NAME}] ⚠️ Connection lost ({e}), reconnecting in {reconnect_delay}s...")
             await asyncio.sleep(reconnect_delay)
             reconnect_delay = min(reconnect_delay * 2, 60)

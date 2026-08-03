@@ -1,3 +1,4 @@
 #!/bin/bash
 cd /home/agent/data/sites/p2p-dash/bridge
-exec python3 nostr_mesh_bridge.py >> /home/agent/data/sites/p2p-dash/bridge/bridge.log 2>&1
+nohup python3 mesh_peer.py > mesh_peer.log 2>&1 &
+echo "mesh_peer started (PID $!)"
