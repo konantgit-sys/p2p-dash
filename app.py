@@ -349,7 +349,7 @@ async def health():
 
 @app.get("/api")
 async def api_root():
-    return {"status": "ok", "service": "p2p-mesh-dashboard", "version": "0.6.0", "endpoints": ["/api/status", "/api/peers", "/api/topics", "/api/wal", "/api/timeline", "/api/dht", "/api/messages", "/api/messages/stats", "/api/metrics", "/api/metrics/history", "/api/discovery", "/api/system", "/api/emit", "/api/register_peer", "/api/known_peers", "/api/mesh/graph", "/"]}
+    return {"status": "ok", "service": "p2p-mesh-dashboard", "version": "0.6.1", "endpoints": ["/api/status", "/api/peers", "/api/topics", "/api/wal", "/api/timeline", "/api/dht", "/api/messages", "/api/messages/stats", "/api/metrics", "/api/metrics/history", "/api/discovery", "/api/system", "/api/emit", "/api/register_peer", "/api/known_peers", "/api/mesh/graph", "/"]}
 
 
 @app.get("/api/health")
@@ -375,7 +375,7 @@ async def api_health():
             "latency_p50_ms": round(p50, 1),
             "wal_entries": wal_count,
             "topics": len(s.get('topics', [])),
-            "version": "0.6.0",
+            "version": "0.6.1",
             "raft_role": mesh._raft.status()["state"] if hasattr(mesh, '_raft') and mesh._raft else "none",
             "consensus": "raft_active" if hasattr(mesh, '_raft') and mesh._raft and mesh._raft.state == "leader" else "raft_standby",
         }
