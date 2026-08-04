@@ -224,12 +224,43 @@ function drawLatHistory() {
 // ═══════════════════════════════════════════
 // ═══ ANIMATED COUNTER
 // ═══════════════════════════════════════════
+// Safe number parser — handles BigInt overflow for large numbers
+function safeParseInt(text) {
+  const cleaned = String(text).replace(/[^0-9-]/g, '');
+  const val = Number(cleaned);
+  if (!Number.isFinite(val) || (cleaned.length > 15 && BigInt(cleaned) !== BigInt(val))) {
+    try { return BigInt(cleaned); } catch(e) { return 0; }
+  }
+  return val;
+}
+
+// Format number for display (handles BigInt)
+function fmtNum(n) {
+  if (typeof n === 'bigint') return n.toLocaleString();
+  if (!Number.isFinite(n)) return '…';
+  if (n >= 1e15) return BigInt(Math.floor(n)).toLocaleString();
+  if (n >= 1e6) return n.toLocaleString();
+  if (Number.isInteger(n)) return n.toLocaleString();
+  return n.toFixed(1);
+}
+
 function animateValue(el, target, suffix) {
   suffix = suffix || '';
-  const start = parseInt(el.textContent) || 0;
-  if (start === target) { el.textContent = target + suffix; return; }
-  const dur = 400; let st;
-  function f(ts) { st ||= ts; const p = Math.min((ts - st) / dur, 1), v = Math.round(start + (target - start) * p); el.textContent = v + suffix; if (p < 1) requestAnimationFrame(f); else el.textContent = target + suffix; }
+  const start = safeParseInt(el.textContent);
+  const s = typeof start === 'bigint' ? Number(start / 100n) : start;
+  const t = typeof target === 'bigint' ? Number(target / 100n) : target;
+  const scale = typeof start === 'bigint' ? 100n : 1;
+  if (s === t && scale === 1) { el.textContent = fmtNum(target) + suffix; return; }
+  const dur = 400; let stT;
+  function f(ts) {
+    stT ||= ts;
+    const p = Math.min((ts - stT) / dur, 1);
+    const v = Math.round(s + (t - s) * p);
+    if (scale === 1) el.textContent = fmtNum(v) + suffix;
+    else el.textContent = fmtNum(BigInt(v) * scale) + suffix;
+    if (p < 1) requestAnimationFrame(f);
+    else el.textContent = fmtNum(target) + suffix;
+  }
   requestAnimationFrame(f);
 }
 
@@ -446,12 +477,16 @@ function notifyCheck(d) {
 
 function animateValueEl(el, target) {
   if (!el) return;
-  const cur = parseInt(el.textContent) || 0;
-  if (cur === target) { el.textContent = target; return; }
+  const cur = safeParseInt(el.textContent);
+  const c = typeof cur === 'bigint' ? Number(cur / 100n) : cur;
+  const t = typeof target === 'bigint' ? Number(target / 100n) : target;
+  const sc = typeof cur === 'bigint' ? 100n : 1;
+  if (c === t && sc === 1) { el.textContent = fmtNum(target); return; }
   const dur = 300, start = performance.now();
   function step(ts) {
     const p = Math.min((ts - start) / dur, 1);
-    el.textContent = Math.round(cur + (target - cur) * p);
+    const v = Math.round(c + (t - c) * p);
+    el.textContent = sc === 1 ? fmtNum(v) : fmtNum(BigInt(v) * sc);
     if (p < 1) requestAnimationFrame(step);
   }
   requestAnimationFrame(step);

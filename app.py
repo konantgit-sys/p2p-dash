@@ -85,6 +85,9 @@ def _save_pingpong():
 # Latency tracking (last 1000 request durations in ms)
 _request_latencies: list[float] = []
 MAX_LATENCY_SAMPLES = 1000
+SLOW_REQUEST_THRESHOLD_MS = 500  # log requests slower than this
+_slow_requests: list[dict] = []  # last 50 slow requests
+MAX_SLOW_LOG = 50
 
 
 # --- Middleware: track all request latencies ---
@@ -96,6 +99,16 @@ async def track_latency(request: Request, call_next):
     _request_latencies.append(dt)
     if len(_request_latencies) > MAX_LATENCY_SAMPLES:
         _request_latencies[:] = _request_latencies[-MAX_LATENCY_SAMPLES:]
+    if dt > SLOW_REQUEST_THRESHOLD_MS:
+        slow = {
+            "path": request.url.path,
+            "method": request.method,
+            "latency_ms": round(dt, 1),
+            "ts": time.time(),
+        }
+        _slow_requests.append(slow)
+        if len(_slow_requests) > MAX_SLOW_LOG:
+            _slow_requests[:] = _slow_requests[-MAX_SLOW_LOG:]
     return response
 
 
@@ -361,6 +374,7 @@ async def api_health():
             return {"mesh": "offline", "status": "error"}
         s = mesh.status()
         wal_count = mesh.wal.count() if hasattr(mesh, 'wal') else 0
+        ring_stats = mesh.wal.ring_stats() if hasattr(mesh, 'wal') else {}
         tcp_peers = list(mesh.transport._tcp_connections.keys()) if hasattr(mesh.transport, '_tcp_connections') else []
         peers = len(tcp_peers)
         p50 = 0
@@ -374,8 +388,9 @@ async def api_health():
             "uptime_seconds": int(time.time() - _start_time) if _start_time else 0,
             "latency_p50_ms": round(p50, 1),
             "wal_entries": wal_count,
+            "wal_ring_system": ring_stats,
             "topics": len(s.get('topics', [])),
-            "version": "0.6.1",
+            "version": "0.6.2",
             # ── Raft v0.6.1 ──
             "raft_role": mesh._raft.status()["state"] if hasattr(mesh, '_raft') and mesh._raft else "none",
             "raft_term": mesh._raft.current_term if hasattr(mesh, '_raft') and mesh._raft else 0,
@@ -778,6 +793,32 @@ _loaded_pingpong = _load_pingpong()
 if _loaded_pingpong:
     _pingpong_results.extend(_loaded_pingpong)
     print(f"[dash] Restored pingpong_results: {len(_loaded_pingpong)} points")
+
+
+@app.get("/api/latency/profile")
+async def latency_profile():
+    """Latency profiling: p50/p95/p99 + slow requests breakdown."""
+    if not _request_latencies:
+        return {"status": "ok", "data": {"samples": 0, "message": "no data yet"}}
+    sorted_lat = sorted(_request_latencies)
+    n = len(sorted_lat)
+    p50 = sorted_lat[int(n * 0.5)]
+    p95 = sorted_lat[int(n * 0.95)]
+    p99 = sorted_lat[int(n * 0.99)]
+    return {
+        "status": "ok",
+        "data": {
+            "samples": n,
+            "p50_ms": round(p50, 1),
+            "p95_ms": round(p95, 1),
+            "p99_ms": round(p99, 1),
+            "min_ms": round(sorted_lat[0], 1),
+            "max_ms": round(sorted_lat[-1], 1),
+            "avg_ms": round(sum(sorted_lat) / n, 1),
+            "slow_requests": _slow_requests[-10:] if _slow_requests else [],
+            "slow_threshold_ms": SLOW_REQUEST_THRESHOLD_MS,
+        },
+    }
 
 
 @app.get("/status", response_class=HTMLResponse)
