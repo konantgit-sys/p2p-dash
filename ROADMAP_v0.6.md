@@ -128,3 +128,31 @@ curl -s http://localhost:8090/api/dht | jq '.data.count'  # > 3, растёт д
 # Peers
 curl -s http://localhost:8090/api/peers | jq '.data.count'  # ≥ 2
 ```
+
+---
+
+## v0.6.3 — Security Hardening (2026-08-05)
+
+### WAL Filter (замечание #2 из Code Review)
+- **Проблема:** 18.2 записей/сек в SQLite WAL, включая системные сообщения (_dht, _raft, _ping). На 50 пирах = ~450 записей/сек → SSD умрёт за часы.
+- **Решение:** `phase0/ring_buffer.py` — in-memory циклический буфер (max 1000) для системных топиков.
+- **SYSTEM_TOPICS:** `_dht`, `_raft`, `_ping`, `_heartbeat`, `_discovery`, `agent:echo`
+- **WALBuffer.append()** теперь автоматически фильтрует: системные → RingBuffer, бизнес → SQLite.
+- **Результат:** 2 165 системных сообщений/65с → ring buffer (3.7% трафика), WAL рост: +6 записей за тот же период.
+
+### BigInt Overflow (замечание #3)
+- `safeParseInt()` + `fmtNum()` — корректная обработка чисел >2^53 в JS
+- `animateValue()` и `animateValueEl()` переписаны с BigInt-защитой
+- `parseInt()` больше не используется для счётчиков
+
+### Latency Profiling (замечание #1 — диагностика)
+- `/api/latency/profile` — p50/p95/p99 + slow requests (>500ms)
+- Middleware теперь логирует медленные запросы (последние 50)
+- **Данные:** p50=1.1ms, p95=12.2ms, p99=12.2ms — бэкенд быстрый, bottleneck = v2.site прокси
+
+### Статус
+- [x] WAL write amplification → исправлено (ring buffer)
+- [x] Integer overflow на фронте → исправлено (BigInt)
+- [x] Latency bottleneck идентифицирован (v2.site proxy, не приложение)
+- [ ] Raft 3-node failover тесты
+- [ ] Проверка с внешнего IP
