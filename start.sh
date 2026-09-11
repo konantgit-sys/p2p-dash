@@ -1,38 +1,76 @@
 #!/bin/bash
-# p2p-dash v0.5.2 — single entry point
-# Uses flock for true mutual exclusion across parallel invocations
-
+# p2p-dash v1.0 — full mesh: 4 observers + bridge + dashboard
+# Единая точка входа. Поднимается системным health-check при падении.
 LOCKFILE=/tmp/p2p-dash.lock
 
-# — Atomic lock via flock —
 exec 9>"$LOCKFILE"
 if ! flock -n 9; then
-    echo "[start] another start.sh is running (flock busy) — exiting"
+    echo "[start] another start.sh is running — exiting"
     exit 0
 fi
 
-echo "[start] $(date) — acquired lock, starting"
+echo "[start] $(date) — acquired lock"
 
-# — Start mesh_peer (only if not already running) —
-if ! pgrep -f "mesh_peer.py" > /dev/null 2>&1; then
-    cd /home/agent/data/sites/p2p-dash/bridge
-    nohup python3 mesh_peer.py > mesh_peer.log 2>&1 &
-    echo "[start] mesh_peer PID=$!"
-else
-    echo "[start] mesh_peer already running"
-fi
+# — Ограничить арены malloc (11.09.2026) —
+# За 53 ч через шину прошло 6.42 млн сообщений, куча раздулась до 1 ГБ анонимных
+# арен (4 региона rw-p), при этом [heap] всего 20 МБ — ОС не возвращала страницы.
+# MALLOC_ARENA_MAX=1 держит одну арену: после правки RSS 1050 -> 68 МБ.
+export MALLOC_ARENA_MAX=1
+export MALLOC_TRIM_THRESHOLD_=131072
+export PYTHONUNBUFFERED=1
 
-# — Start nostr_mesh_bridge (only if not already running) —
-if ! pgrep -f "nostr_mesh_bridge.py" > /dev/null 2>&1; then
-    cd /home/agent/data/sites/p2p-dash/bridge
-    nohup python3 nostr_mesh_bridge.py > bridge.log 2>&1 &
-    echo "[start] bridge PID=$!"
-else
-    echo "[start] bridge already running"
-fi
-
+# — Остановить прежние процессы —
+# ВАЖНО (11.09.2026): fuser/ss в этом контейнере НЕ видят сокеты пода (при живом
+# дашборде "fuser 8090/tcp" отдаёт пусто), а pkill -f матчит любую командную строку
+# с подстрокой "mesh_peer.py" и убивает посторонние процессы (включая вызывающий
+# скрипт). Поэтому цели ищем строго: python <файл> + каталог процесса.
+python3 - << 'PYEOF'
+import os, signal
+BASE = '/home/agent/data/sites/p2p-dash'
+TARGETS = {'app.py', 'mesh_peer.py', 'nostr_mesh_bridge.py'}
+PY = ('python3', 'python', 'python3.11')
+me = {os.getpid(), os.getppid()}
+killed = []
+for p in os.listdir('/proc'):
+    if not p.isdigit() or int(p) in me:
+        continue
+    try:
+        args = [a for a in open(f'/proc/{p}/cmdline').read().split('\x00') if a]
+        cwd = os.readlink(f'/proc/{p}/cwd')
+    except OSError:
+        continue
+    if len(args) < 2 or os.path.basename(args[0]) not in PY:
+        continue
+    if os.path.basename(args[1]) not in TARGETS:
+        continue
+    if not cwd.startswith(BASE):
+        continue
+    try:
+        os.kill(int(p), signal.SIGKILL)
+        killed.append(f'{os.path.basename(args[1])} (PID {p})')
+    except OSError:
+        pass
+print('[start] killed: ' + (', '.join(killed) if killed else 'нечего убивать'))
+PYEOF
 sleep 2
 
-# — Start app.py (foreground, lock stays via fd 9) —
+# — Start bridge —
+cd /home/agent/data/sites/p2p-dash/bridge
+nohup python3 nostr_mesh_bridge.py > bridge.log 2>&1 9>&- &
+echo "[start] bridge PID=$!"
+
+# — Start 4 observers —
+for i in 1 2 3 4; do
+    PEER_NAME="observer-$i" nohup python3 mesh_peer.py > mesh_peer_${i}.log 2>&1 9>&- &
+    echo "[start] observer-$i PID=$!"
+done
+
+sleep 3
+
+# — Start dashboard —
 cd /home/agent/data/sites/p2p-dash
+# Освобождаем flock ПЕРЕД exec: иначе лок унаследует дашборд, следующий start.sh
+# его уже не получит — и health-check не сможет поднять бэкенд после падения.
+flock -u 9 2>/dev/null || true
+exec 9>&-
 exec python3 app.py

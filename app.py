@@ -15,7 +15,7 @@ from pathlib import Path
 # Add project to path
 sys.path.insert(0, "/home/agent/data/projects/p2p-agent-mesh")
 
-from fastapi import FastAPI, HTTPException, Request, Query
+from fastapi import FastAPI, HTTPException, Request, Query, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse
@@ -331,29 +331,101 @@ async def get_message_stats():
     }
 
 
+_cpu_prev: tuple | None = None  # (usage_usec, ts) для расчёта загрузки CPU контейнера
+
+
+def _read_text(path: str):
+    try:
+        return Path(path).read_text().strip()
+    except Exception:
+        return None
+
+
+def _read_int(path: str):
+    v = _read_text(path)
+    if v is None or v == "max":
+        return None
+    try:
+        return int(float(v))
+    except (TypeError, ValueError):
+        return None
+
+
 @app.get("/api/system")
 async def get_system():
-    """System resource info."""
+    """Ресурсы КОНТЕЙНЕРА (cgroup v2), а не хоста.
+
+    Исправлено 2026-09-11: раньше отдавались хостовые цифры (psutil.virtual_memory
+    + os.getloadavg) — показывали RAM и нагрузку всего сервера (47 ГБ, load 14),
+    что для нашего пода неверно. Теперь memory.max/memory.current, cpu.max,
+    cpu.stat, pids.current. Диск — /home/agent/data (не хостовый корень).
+    """
+    global _cpu_prev
+    data = {
+        "memory_used_gb": 0.0, "memory_total_gb": 0.0, "memory_pct": 0.0,
+        "disk_used_gb": 0.0, "disk_total_gb": 0.0, "disk_pct": 0.0,
+        "processes": 0, "load_avg": 0.0, "source": "cgroup",
+    }
+
+    # ── RAM: cgroup v2, с откатом на v1 ──
+    used_b = _read_int("/sys/fs/cgroup/memory.current") or _read_int("/sys/fs/cgroup/memory/memory.usage_in_bytes")
+    limit_b = _read_int("/sys/fs/cgroup/memory.max") or _read_int("/sys/fs/cgroup/memory/memory.limit_in_bytes")
+    if used_b is not None:
+        data["memory_used_gb"] = round(used_b / (1024 ** 3), 2)
+    if limit_b:
+        data["memory_total_gb"] = round(limit_b / (1024 ** 3), 2)
+        if used_b is not None:
+            data["memory_pct"] = round(used_b * 100.0 / limit_b, 1)
+
+    # ── CPU: лимит в ядрах из cpu.max + загрузка из cpu.stat ──
+    cores = None
+    cm = _read_text("/sys/fs/cgroup/cpu.max")  # формат "quota period", "max 100000" = без лимита
+    if cm:
+        parts = cm.split()
+        if len(parts) == 2 and parts[0] != "max":
+            try:
+                cores = int(parts[0]) / int(parts[1])
+            except (ValueError, ZeroDivisionError):
+                cores = None
+    if cores:
+        data["cpu_cores_limit"] = round(cores, 2)
+    usage_usec = None
+    cs = _read_text("/sys/fs/cgroup/cpu.stat")
+    if cs:
+        for line in cs.splitlines():
+            if line.startswith("usage_usec"):
+                try:
+                    usage_usec = int(line.split()[1])
+                except (ValueError, IndexError):
+                    usage_usec = None
+                break
+    if usage_usec is not None:
+        now = time.time()
+        if _cpu_prev and now > _cpu_prev[1] and cores:
+            busy = (usage_usec - _cpu_prev[0]) / 1e6 / (now - _cpu_prev[1])
+            data["load_avg"] = round(max(busy / cores, 0.0), 2)  # доля от лимита: 1.0 = занято полностью
+            data["cpu_busy_cores"] = round(max(busy, 0.0), 2)
+        _cpu_prev = (usage_usec, now)
+        data["cpu_used_sec"] = round(usage_usec / 1e6, 1)
+
+    # ── Процессы: pids.current (внутри контейнера) ──
+    pids = _read_int("/sys/fs/cgroup/pids.current")
+    if pids is not None:
+        data["processes"] = pids
+
+    # ── Диск: наш data-раздел ──
     try:
-        import psutil
-        mem = psutil.virtual_memory()
-        disk = psutil.disk_usage("/home/agent/data")
-        proc_count = len(psutil.pids())
-        return {
-            "status": "ok",
-            "data": {
-                "memory_used_gb": round(mem.used / (1024**3), 1),
-                "memory_total_gb": round(mem.total / (1024**3), 1),
-                "memory_pct": mem.percent,
-                "disk_used_gb": round(disk.used / (1024**3), 1),
-                "disk_total_gb": round(disk.total / (1024**3), 1),
-                "disk_pct": disk.percent,
-                "processes": proc_count,
-                "load_avg": os.getloadavg()[0],
-            }
-        }
-    except Exception as e:
-        return {"status": "error", "error": str(e)}
+        st = os.statvfs("/home/agent/data")
+        total = st.f_blocks * st.f_frsize
+        free = st.f_bavail * st.f_frsize
+        used = total - free
+        data["disk_used_gb"] = round(used / (1024 ** 3), 1)
+        data["disk_total_gb"] = round(total / (1024 ** 3), 1)
+        data["disk_pct"] = round(used * 100.0 / total, 1) if total else 0.0
+    except Exception:
+        pass
+
+    return {"status": "ok", "data": data}
 
 
 @app.get("/health")
@@ -834,6 +906,244 @@ async def index():
 app.mount("/static/", StaticFiles(directory=str(site_dir / "static")), name="static")
 app.mount("/css/", StaticFiles(directory=str(site_dir / "css")), name="css")
 app.mount("/js/", StaticFiles(directory=str(site_dir / "js")), name="js")
+
+
+# ============================================================
+# WebSocket Relay — for 55-peer scale testing
+# ============================================================
+
+class RelayManager:
+    """Lightweight WebSocket relay for scale testing."""
+    
+    def __init__(self):
+        self.connections: dict[str, WebSocket] = {}
+        self.subscriptions: dict[str, set] = {}
+        self.msg_counts: dict[str, int] = {}
+        self.msg_sent: dict[str, int] = {}
+        # Health counters
+        self.connections_total: int = 0      # total connections since startup
+        self.connections_peak: int = 0       # max concurrent
+        self.messages_relayed: int = 0       # total forwarded
+        self.messages_dropped: int = 0       # failed sends
+        self._start_time: float = time.time()
+    
+    def _update_peak(self):
+        cur = len(self.connections)
+        if cur > self.connections_peak:
+            self.connections_peak = cur
+    
+    def register(self, peer_id: str, ws: WebSocket, topics: list[str]):
+        self.connections[peer_id] = ws
+        self.subscriptions[peer_id] = set(topics)
+        self.msg_counts[peer_id] = 0
+        self.msg_sent[peer_id] = 0
+        self.connections_total += 1
+        self._update_peak()
+    
+    def disconnect(self, peer_id: str):
+        self.connections.pop(peer_id, None)
+        self.subscriptions.pop(peer_id, None)
+        self.msg_counts.pop(peer_id, None)
+        self.msg_sent.pop(peer_id, None)
+    
+    async def broadcast(self, from_peer: str, topic: str, msg_id: str, data: str):
+        self.msg_sent[from_peer] = self.msg_sent.get(from_peer, 0) + 1
+        payload = {
+            "type": "message",
+            "from": from_peer,
+            "topic": topic,
+            "msg_id": msg_id,
+            "data": data,
+            "hop": 1,
+            "ts": time.time(),
+        }
+        dead = []
+        for peer_id, ws in self.connections.items():
+            if peer_id == from_peer:
+                continue
+            sub = self.subscriptions.get(peer_id, set())
+            if topic in sub or "_all" in sub:
+                try:
+                    await ws.send_json(payload)
+                    self.msg_counts[peer_id] = self.msg_counts.get(peer_id, 0) + 1
+                    self.messages_relayed += 1
+                except Exception:
+                    dead.append(peer_id)
+                    self.messages_dropped += 1
+        for p in dead:
+            self.disconnect(p)
+    
+    def get_stats(self):
+        return {
+            "type": "stats_response",
+            "peer_count": len(self.connections),
+            "peers": list(self.connections.keys())[:20],
+            "msg_counts": dict(self.msg_counts),
+            "msg_sent": dict(self.msg_sent),
+            # Health
+            "connections_total": self.connections_total,
+            "connections_peak": self.connections_peak,
+            "messages_relayed": self.messages_relayed,
+            "messages_dropped": self.messages_dropped,
+            "uptime_sec": round(time.time() - self._start_time, 1),
+            "relay_ts": time.time(),
+        }
+
+
+relay = RelayManager()
+
+
+@app.get("/relay/health")
+async def relay_health():
+    """Health check endpoint for relay — shows connection stats."""
+    s = relay.get_stats()
+    return {
+        "status": "ok",
+        "peer_count": s["peer_count"],
+        "connections_total": s["connections_total"],
+        "connections_peak": s["connections_peak"],
+        "messages_relayed": s["messages_relayed"],
+        "messages_dropped": s["messages_dropped"],
+        "uptime_sec": s["uptime_sec"],
+    }
+
+
+@app.websocket("/relay")
+async def relay_endpoint(ws: WebSocket):
+    peer_id = None
+    await ws.accept()  # Must accept first
+    try:
+        raw = await ws.receive_text()
+        hello = json.loads(raw)
+        if hello.get("type") != "hello":
+            await ws.close()
+            return
+        
+        peer_id = hello["peer_id"]
+        topics = hello.get("topics", ["_all"])
+        relay.register(peer_id, ws, topics)
+        
+        await ws.send_json({
+            "type": "welcome",
+            "peer_count": len(relay.connections),
+            "peers": list(relay.connections.keys()),
+            "relay_ts": time.time(),
+        })
+        
+        while True:
+            raw = await ws.receive_text()
+            msg = json.loads(raw)
+            msg_type = msg.get("type")
+            
+            if msg_type == "publish":
+                await relay.broadcast(
+                    peer_id,
+                    msg.get("topic", "_all"),
+                    msg.get("msg_id", "?"),
+                    msg.get("data", ""),
+                )
+            elif msg_type == "stats_request":
+                await ws.send_json(relay.get_stats())
+            elif msg_type == "ping":
+                await ws.send_json({"type": "pong", "ts": time.time()})
+    
+    except WebSocketDisconnect:
+        pass
+    except Exception as e:
+        print(f"[relay] ERR {peer_id}: {e}", flush=True)
+    finally:
+        if peer_id:
+            relay.disconnect(peer_id)
+
+
+# ============================================================
+# HTTP Relay — fallback when WebSocket upgrade fails through proxy
+# ============================================================
+import threading
+
+http_message_buffer: list[dict] = []
+http_message_lock = threading.Lock()
+http_message_seq: int = 0
+
+
+@app.post("/api/relay/register")
+async def http_relay_register(req: Request):
+    body = await req.json()
+    peer_id = body.get("peer_id", "anon")
+    relay.http_peers[peer_id] = time.time()
+    relay.connections_total += 1
+    relay._update_peak()
+    # Clean stale peers on register too
+    cutoff = time.time() - 180
+    stale = [pid for pid, ts in relay.http_peers.items() if ts < cutoff]
+    for pid in stale:
+        relay.http_peers.pop(pid, None)
+        relay.msg_counts.pop(pid, None)
+        relay.msg_sent.pop(pid, None)
+    return {
+        "status": "ok",
+        "peer_count": len(relay.http_peers),
+        "peers": list(relay.http_peers.keys()),
+        "server_ts": time.time(),
+    }
+
+
+@app.post("/api/relay/publish")
+async def http_relay_publish(req: Request):
+    global http_message_seq
+    body = await req.json()
+    peer_id = body.get("peer_id", "anon")
+    msg_id = body.get("msg_id", "?")
+    data = body.get("data", "")
+    relay.msg_sent[peer_id] = relay.msg_sent.get(peer_id, 0) + 1
+    with http_message_lock:
+        http_message_seq += 1
+        msg = {"seq": http_message_seq, "from": peer_id, "msg_id": msg_id, "data": data, "ts": time.time()}
+        http_message_buffer.append(msg)
+        if len(http_message_buffer) > 10000:
+            http_message_buffer[:] = http_message_buffer[-8000:]
+    delivered = 0
+    for pid in relay.http_peers:
+        if pid != peer_id:
+            delivered += 1
+            relay.msg_counts[pid] = relay.msg_counts.get(pid, 0) + 1
+    relay.messages_relayed += delivered
+    return {"status": "ok", "seq": http_message_seq, "delivered_to": delivered, "peer_count": len(relay.http_peers)}
+
+
+@app.post("/api/relay/reset")
+async def http_relay_reset():
+    """Reset relay state for a fresh test."""
+    global http_message_seq, http_message_buffer
+    with http_message_lock:
+        http_message_buffer.clear()
+        http_message_seq = 0
+    relay.http_peers.clear()
+    relay.msg_counts.clear()
+    relay.msg_sent.clear()
+    relay.connections_total = 0
+    relay.connections_peak = 0
+    relay.messages_relayed = 0
+    relay.messages_dropped = 0
+    return {"status": "reset_ok", "server_ts": time.time()}
+
+
+@app.get("/api/relay/poll")
+async def http_relay_poll(since: int = 0, peer_id: str = "anon"):
+    relay.http_peers[peer_id] = time.time()
+    # Clean up stale peers (no activity for 180s)
+    cutoff = time.time() - 180
+    stale = [pid for pid, ts in relay.http_peers.items() if ts < cutoff]
+    for pid in stale:
+        relay.http_peers.pop(pid, None)
+        relay.msg_counts.pop(pid, None)
+        relay.msg_sent.pop(pid, None)
+    with http_message_lock:
+        msgs = [m for m in http_message_buffer if m["seq"] > since and m["from"] != peer_id]
+    return {"messages": msgs, "last_seq": http_message_seq, "peer_count": len(relay.http_peers), "server_ts": time.time()}
+
+
+relay.http_peers = {}
 
 
 if __name__ == "__main__":
