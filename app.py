@@ -117,8 +117,39 @@ class EmitRequest(BaseModel):
     payload: dict
 
 
+async def _gc_loop():
+    """Фоновая сборка мусора (12.09.2026).
+
+    Замерено: при 30-80 msg/s объекты копятся быстрее, чем срабатывают пороги
+    сборщика Python, и RSS растёт ~24 МБ/ч (в тишине; с активными запросами
+    до 99 МБ/ч). Раз в 120 с собираем мусор и пишем замер в gc_log.jsonl.
+    Отключается файлом GC_LOOP_OFF рядом с app.py.
+    """
+    import gc
+    base = Path("/home/agent/data/sites/p2p-dash")
+    while True:
+        await asyncio.sleep(120)
+        try:
+            if (base / "GC_LOOP_OFF").exists():
+                continue
+            before = int(open("/proc/self/status").read().split("VmRSS:")[1].split()[0]) // 1024
+            collected = gc.collect()
+            after = int(open("/proc/self/status").read().split("VmRSS:")[1].split()[0]) // 1024
+            log = base / "gc_log.jsonl"
+            with log.open("a") as f:
+                f.write(json.dumps({"ts": time.time(), "rss_before_mb": before,
+                                    "rss_after_mb": after, "freed_mb": before - after,
+                                    "objects_collected": collected}) + "\n")
+            if log.stat().st_size > 200_000:  # ротация, чтобы лог не рос
+                lines = log.read_text().splitlines()[-500:]
+                log.write_text("\n".join(lines) + "\n")
+        except Exception:
+            pass
+
+
 @app.on_event("startup")
 async def startup():
+    asyncio.create_task(_gc_loop())
     global mesh
     db_path = "/tmp/p2p_dash_mesh.db"
     mesh = AgentMesh("dashboard", ["dash", "ping", "echo"],
@@ -580,6 +611,114 @@ async def get_wal():
         return {"status": "ok", "data": {"count": count, "entries": []}}
     except Exception as e:
         return {"status": "error", "error": str(e)}
+
+# ── Диагностика памяти по требованию (12.09.2026) ────────────────────────────
+# Дашборд за 5 ч набирает ~190 МБ: heap растёт, а все структуры стабильны.
+# Нужно различить две версии: (а) утечка Python-объектов — tracemalloc покажет
+# рост конкретной строки кода; (б) фрагментация pymalloc — tracemalloc покажет
+# мало, а gc-объекты будут стоять на месте. Постоянно tracemalloc НЕ держим:
+# он сам ест память и тормозит. Схема: start → mark → (ждём) → diff → stop.
+_trace_mark = {"snapshot": None, "at": None}
+
+
+@app.post("/api/debug/trace/start")
+async def debug_trace_start(frames: int = 15):
+    import tracemalloc
+    if tracemalloc.is_tracing():
+        tracemalloc.stop()
+    tracemalloc.start(max(1, min(frames, 25)))
+    cur, _ = tracemalloc.get_traced_memory()
+    return {"status": "ok", "data": {"tracing": True, "frames": max(1, min(frames, 25)),
+                                     "traced_mb": round(cur / 1048576, 2)}}
+
+
+@app.post("/api/debug/trace/mark")
+async def debug_trace_mark(name: str = "a"):
+    import tracemalloc
+    if not tracemalloc.is_tracing():
+        return {"status": "error", "error": "tracemalloc не запущен: POST /api/debug/trace/start"}
+    _trace_mark["snapshot"] = tracemalloc.take_snapshot()
+    _trace_mark["at"] = time.time()
+    return {"status": "ok", "data": {"marked": name, "ts": _trace_mark["at"]}}
+
+
+@app.get("/api/debug/trace/diff")
+async def debug_trace_diff(limit: int = 15):
+    """Что выросло с момента mark: по строкам кода + объектная статистика."""
+    import tracemalloc, gc
+    from collections import Counter
+    if not tracemalloc.is_tracing():
+        return {"status": "error", "error": "tracemalloc не запущен"}
+    if _trace_mark["snapshot"] is None:
+        return {"status": "error", "error": "нет отметки: сначала POST /api/debug/trace/mark"}
+    snap = tracemalloc.take_snapshot()
+    stats = snap.compare_to(_trace_mark["snapshot"], "lineno")
+    top = [{"place": f"{s.traceback[0].filename.split('/')[-1]}:{s.traceback[0].lineno}",
+            "size_kb": round(s.size_diff / 1024, 1), "count_diff": s.count_diff}
+           for s in stats[:max(1, min(limit, 50))] if s.size_diff > 0]
+    objs = Counter(type(o).__name__ for o in gc.get_objects())
+    cur, peak = tracemalloc.get_traced_memory()
+    return {"status": "ok", "data": {
+        "since_sec": round(time.time() - (_trace_mark["at"] or time.time()), 1) if _trace_mark["at"] else None,
+        "traced_mb_now": round(cur / 1048576, 2), "traced_peak_mb": round(peak / 1048576, 2),
+        "gc_objects_total": sum(objs.values()),
+        "gc_top_types": [{"type": t, "count": c} for t, c in objs.most_common(8)],
+        "top_growing": top,
+    }}
+
+
+@app.get("/api/debug/objects")
+async def debug_objects():
+    """Крупные структуры процесса: сколько объектов и сколько байт (без tracemalloc)."""
+    import gc, sys
+    from collections import Counter
+    objs = gc.get_objects()
+    sizes = {}
+    for o in objs[:400000]:
+        try:
+            s = sys.getsizeof(o)
+        except Exception:
+            continue
+        t = type(o).__name__
+        cnt, tot = sizes.get(t, (0, 0))
+        sizes[t] = (cnt + 1, tot + s)
+    top = sorted(sizes.items(), key=lambda kv: -kv[1][1])[:10]
+    return {"status": "ok", "data": {
+        "gc_objects_total": len(objs),
+        "by_type": [{"type": t, "count": c, "mb": round(b / 1048576, 2)} for t, (c, b) in top],
+        "rss_mb": round(int(open("/proc/self/status").read().split("VmRSS:")[1].split()[0]) / 1024, 1),
+    }}
+
+
+@app.post("/api/debug/gc")
+async def debug_gc():
+    """Ручная сборка мусора с замером: отличает несобранные объекты от утечки."""
+    import gc
+    rss_before = int(open("/proc/self/status").read().split("VmRSS:")[1].split()[0]) // 1024
+    counts_before = gc.get_count()
+    t0 = time.time()
+    collected = gc.collect()
+    dt = (time.time() - t0) * 1000
+    rss_after = int(open("/proc/self/status").read().split("VmRSS:")[1].split()[0]) // 1024
+    return {"status": "ok", "data": {
+        "rss_before_mb": rss_before, "rss_after_mb": rss_after,
+        "freed_mb": rss_before - rss_after, "objects_collected": collected,
+        "collect_ms": round(dt, 1), "counts_before": list(counts_before),
+        "thresholds": list(gc.get_threshold()), "enabled": gc.isenabled(),
+        "gc_objects_after": len(gc.get_objects()),
+    }}
+
+
+@app.post("/api/debug/trace/stop")
+async def debug_trace_stop():
+    import tracemalloc
+    was = tracemalloc.is_tracing()
+    if was:
+        tracemalloc.stop()
+    _trace_mark["snapshot"] = None
+    _trace_mark["at"] = None
+    return {"status": "ok", "data": {"was_tracing": was, "tracing": False}}
+
 
 @app.get("/api/timeline")
 async def get_timeline():

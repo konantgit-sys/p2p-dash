@@ -35,6 +35,35 @@ PYEOF
 read -r OLD_PID OLD_RSS <<< "$(find_dash)"
 echo "$(date -Is) — плановый перезапуск старт, PID был: ${OLD_PID:-нет}, RSS до: ${OLD_RSS:-?} МБ" >> "$LOG"
 
+# Явная остановка: start.sh теперь идемпотентен и живой дашборд не убивает,
+# поэтому плановый рестарт сам снимает процессы (иначе он бы ничего не сделал).
+python3 - << 'PYEOF'
+import os, signal
+BASE = '/home/agent/data/sites/p2p-dash'
+TARGETS = {'app.py', 'mesh_peer.py', 'nostr_mesh_bridge.py'}
+me = {os.getpid(), os.getppid()}
+killed = []
+for p in os.listdir('/proc'):
+    if not p.isdigit() or int(p) in me:
+        continue
+    try:
+        args = [a for a in open(f'/proc/{p}/cmdline').read().split('\x00') if a]
+        cwd = os.readlink(f'/proc/{p}/cwd')
+    except OSError:
+        continue
+    if len(args) < 2 or not os.path.basename(args[0]).startswith('python'):
+        continue
+    if os.path.basename(args[1]) not in TARGETS or not cwd.startswith(BASE):
+        continue
+    try:
+        os.kill(int(p), signal.SIGKILL)
+        killed.append(os.path.basename(args[1]))
+    except OSError:
+        pass
+print(f"[restart] остановлено: {len(killed)} процессов {sorted(set(killed))}")
+PYEOF
+sleep 3
+
 setsid nohup bash start.sh >> "$LOG" 2>&1 < /dev/null &
 sleep 12
 
