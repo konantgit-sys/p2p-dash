@@ -32,7 +32,10 @@ export MALLOC_TRIM_THRESHOLD_=131072
 # PYTHONMALLOC=malloc отключает пул мелких объектов Python: аллокации уходят в
 # glibc, которая с MALLOC_ARENA_MAX=1 и trim-порогом должна возвращать память ОС.
 # ОТКАТ: закомментировать строку ниже и перезапустить (bash p2p_daily_restart.sh).
-export PYTHONMALLOC=malloc
+# ЭКСПЕРИМЕНТ ЗАКРЫТ 12.09 (отрицательный): наклон +33.5-36 МБ/ч против базы +31.5.
+# malloc_trim(0) на живом 150-МБ процессе через gdb вернул 1, но RSS не отдал ни МБ,
+# heap 122 -> 122 => это не фрагментация, а живые аллокации. Откат на pymalloc:
+# export PYTHONMALLOC=malloc
 export PYTHONUNBUFFERED=1
 
 # — Остановить прежние процессы —
