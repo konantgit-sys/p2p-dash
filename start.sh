@@ -27,6 +27,12 @@ fi
 # MALLOC_ARENA_MAX=1 держит одну арену: после правки RSS 1050 -> 68 МБ.
 export MALLOC_ARENA_MAX=1
 export MALLOC_TRIM_THRESHOLD_=131072
+# --- Эксперимент 12.09.2026: pymalloc -> glibc malloc ---
+# База на pymalloc: 68 -> 131 МБ за 120 мин = 31.5 МБ/ч (heap 67 МБ).
+# PYTHONMALLOC=malloc отключает пул мелких объектов Python: аллокации уходят в
+# glibc, которая с MALLOC_ARENA_MAX=1 и trim-порогом должна возвращать память ОС.
+# ОТКАТ: закомментировать строку ниже и перезапустить (bash p2p_daily_restart.sh).
+export PYTHONMALLOC=malloc
 export PYTHONUNBUFFERED=1
 
 # — Остановить прежние процессы —
