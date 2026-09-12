@@ -13,3 +13,10 @@ pingpong_results.json
 total_messages.json
 backend.log
 bridge/bridge.log
+# рабочие артефакты процесса (не код)
+GC_LOOP_OFF
+gc_log.jsonl
+restart.log
+server.log
+*.db-wal
+*.db-shm
