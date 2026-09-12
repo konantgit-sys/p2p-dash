@@ -1288,9 +1288,4 @@ relay.http_peers = {}
 if __name__ == "__main__":
     import uvicorn
     print(f"[dash] total_messages={total_messages}")
-    # Эксперимент 12.09 №2: uvloop -> штатный asyncio.
-# Причина: tracemalloc показал 49 179 живых объектов _StreamWriteContext (класс uvloop)
-# и +35 МБ на runners.py:118 (asyncio.run внутри uvicorn) при росте RSS ~31 МБ/ч.
-# Publicly подтверждённой утечки uvloop 0.22 нет -> проверяем локально A/B.
-# ОТКАТ: убрать loop="asyncio" (вернётся uvloop) + bash p2p_daily_restart.sh
-uvicorn.run(app, host="0.0.0.0", port=8090, loop="asyncio")
+    uvicorn.run(app, host="0.0.0.0", port=8090)
