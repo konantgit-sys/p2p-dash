@@ -776,35 +776,18 @@ async def debug_alloc():
 
     def _grab(pattern):
         m = re.search(pattern, raw)
-        if not m:
-            return None
-        v = m.group(1).replace(",", "")
-        return int(v) if v.isdigit() else v.strip()
-
-    # таблица классов размеров: class size num_pools blocks_in_use avail
-    classes = []
-    for line in raw.splitlines():
-        m = re.match(r"\s*(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s*$", line)
-        if m:
-            classes.append({"cls": int(m.group(1)), "size": int(m.group(2)), "pools": int(m.group(3)),
-                            "in_use": int(m.group(4)), "avail": int(m.group(5))})
+        return m.group(1).strip() if m else None
 
     alloc = {
-        "arenas_current": _grab(r"# arenas allocated current\s*=\s*(\d+)"),
-        "arenas_allocated_total": _grab(r"# arenas allocated total\s*=\s*(\d+)"),
-        "arenas_reclaimed": _grab(r"# arenas reclaimed\s*=\s*(\d+)"),
-        "arenas_highwater": _grab(r"# arenas highwater mark\s*=\s*(\d+)"),
-        "arena_bytes": _grab(r"\d+ arenas \* \d+ bytes/arena\s*=\s*([\d,]+)"),
-        "bytes_in_allocated_blocks": _grab(r"# bytes in allocated blocks\s*=\s*([\d,]+)"),
-        "bytes_in_available_blocks": _grab(r"# bytes in available blocks\s*=\s*([\d,]+)"),
-        "unused_pools": _grab(r"(\d+) unused pools \*"),
-        "unused_pool_bytes": _grab(r"\d+ unused pools \* \d+ bytes\s*=\s*([\d,]+)"),
-        "lost_pool_headers": _grab(r"# bytes lost to pool headers\s*=\s*([\d,]+)"),
-        "lost_quantization": _grab(r"# bytes lost to quantization\s*=\s*([\d,]+)"),
-        "lost_arena_alignment": _grab(r"# bytes lost to arena alignment\s*=\s*([\d,]+)"),
-        "pools_total": sum(c["pools"] for c in classes),
-        "blocks_in_use_total": sum(c["in_use"] for c in classes),
-        "size_classes_top": sorted(classes, key=lambda c: -c["pools"])[:10],
+        "arenas": _grab(r"Total number of arenas:\s*(\d+)"),
+        "arenas_with_objects": _grab(r"Number of arenas with objects:\s*(\d+)"),
+        "arena_bytes": _grab(r"Total number of bytes in arenas:\s*(\d+)"),
+        "allocated_blocks": _grab(r"Total number of allocated blocks:\s*(\d+)"),
+        "block_bytes": _grab(r"Total number of bytes in allocated blocks:\s*(\d+)"),
+        "unused_pools": _grab(r"Total number of unused pools:\s*(\d+)"),
+        "unused_pool_bytes": _grab(r"Total number of bytes in unused pools:\s*(\d+)"),
+        "peak_arenas": _grab(r"Peak number of arenas:\s*(\d+)"),
+        "efficiency": _grab(r"(\d+\.\d+)% efficiency"),
     }
 
     # --- (б) крупные анонимные регионы: размер, занято, что в начале
@@ -871,7 +854,7 @@ async def debug_alloc():
         "anon_regions_over_2mb": len(regions),
         "anon_rss_mb": anon_total_mb,
         "allocator": alloc,
-        "allocator_raw_tail": raw.splitlines()[-16:],
+        "allocator_raw": raw.splitlines()[:26],
         "threads": threading.active_count(),
         "thread_names": [t.name for t in threading.enumerate()][:12],
         "allocated_blocks_total": sys.getallocatedblocks(),

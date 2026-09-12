@@ -51,6 +51,19 @@ try:
 except Exception:
     pass
 
+# Внутренняя атрибуция памяти (эксперимент №2, 12.09): арены Python и крупные
+# анонимные блоки. Нужна кривая, а не одна точка: растут ли арены pymalloc
+# (тогда копятся Python-объекты) или крупные анонимные блоки C-слоя.
+alloc = {}
+try:
+    with urllib.request.urlopen("http://localhost:8090/api/debug/alloc", timeout=25) as r:
+        alloc = json.load(r).get("data", {})
+except Exception:
+    pass
+
+a = alloc.get("allocator") or {}
+big = (alloc.get("top_regions") or [{}])[0]
+
 row = {
     "ts": int(time.time()),
     "mode": mode,
@@ -60,6 +73,15 @@ row = {
     "anon_mb": regs.get("", 0) // 1024,
     "msg_rate": metrics.get("msg_rate"),
     "msgs_total": metrics.get("message_count"),
+    "arenas": a.get("arenas_current"),
+    "arena_mb": round((a.get("arena_bytes") or 0) / 1048576, 1),
+    "py_blocks_in_use": a.get("blocks_in_use_total"),
+    "py_pools": a.get("pools_total"),
+    "unused_pools": a.get("unused_pools"),
+    "anon_big_mb": alloc.get("anon_rss_mb"),
+    "biggest_mb": big.get("rss_mb"),
+    "biggest_what": (big.get("what") or "")[:40],
+    "threads": alloc.get("threads"),
 }
 with open(f"{base}/mem_watch.jsonl", "a") as f:
     f.write(json.dumps(row) + "\n")
